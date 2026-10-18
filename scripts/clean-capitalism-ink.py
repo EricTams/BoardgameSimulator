@@ -7,7 +7,7 @@ from html import escape
 
 import cv2
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / 'art/capitalism-plus'
@@ -43,17 +43,9 @@ for card in catalog['cards']:
     result[:, :, :3] = INK
     result[:, :, 3] = np.round(alpha * 255).astype(np.uint8)
     image = Image.fromarray(result)
-    if slug == 'ten-hens':
-        # An added, thin frame gives the cropped hens a visible boundary.
-        # Only the frame is rendered at higher resolution; source ink is untouched.
-        scale = 4
-        frame = Image.new('RGBA', (w * scale, h * scale))
-        ImageDraw.Draw(frame).rectangle((3, 3, w * scale - 4, h * scale - 4),
-                                       outline=(*INK, 255), width=6)
-        image = Image.alpha_composite(image, frame.resize((w, h), Image.Resampling.LANCZOS))
     assert image.getchannel('A').getextrema()[0] == 0, slug
     image.save(OUT / f'{slug}.png', optimize=True)
-    rows.append(f'<article><h2>{escape(card["name"])}</h2><div class="pair"><figure><img src="{card["artwork"]}" alt="Original {escape(card["name"])}"><figcaption>Original photo crop</figcaption></figure><figure><img src="transparent/{slug}.png" alt="Transparent {escape(card["name"])}"><figcaption>Original ink{ " + frame" if slug == "ten-hens" else ""}</figcaption></figure></div></article>')
+    rows.append(f'<article><h2>{escape(card["name"])}</h2><div class="pair"><figure><img src="{card["artwork"]}" alt="Original {escape(card["name"])}"><figcaption>Original photo crop</figcaption></figure><figure><img src="transparent/{slug}.png" alt="Transparent {escape(card["name"])}"><figcaption>Original ink</figcaption></figure></div></article>')
 # Remove obsolete outputs only from the generated transparency directory.
 expected = {c['id'] + '.png' for c in catalog['cards']}
 for old in OUT.glob('*.png'):
@@ -61,5 +53,5 @@ for old in OUT.glob('*.png'):
         old.unlink()
 (ART / 'transparent-review.html').write_text('''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Capitalism Plus · Original ink</title><style>
 *{box-sizing:border-box}body{margin:0;background:#f2f0e8;color:#263f39;font:14px system-ui}main{max-width:1500px;margin:auto;padding:24px}h1{font:34px Georgia}h2{font:18px Georgia;margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}article{background:#fffdf7;border:1px solid #d5dbce;border-radius:9px;padding:16px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}figure{margin:0;min-width:0}img{width:100%;height:150px;object-fit:contain;background:var(--paper,#fff)}figcaption{font-size:11px;margin-top:8px}select,input{font:inherit;padding:8px;margin:8px 12px 20px 0}article[hidden]{display:none}@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.grid{grid-template-columns:1fr}}
-</style></head><body><main><h1>Capitalism Plus · Original ink</h1><p>69 original-pixel extractions. Paper and shading become transparency; original pen strokes remain. Ten Hens has an added thin frame.</p><input type="search" aria-label="Search cards" placeholder="Find a card"><label>Background <select><option value="#fff">White</option><option value="#f2e4c7">Warm paper</option><option value="#d7e9ee">Pale blue</option></select></label><div class="grid">''' + ''.join(rows) + '''</div></main><script>document.querySelector('input').oninput=e=>{for(const a of document.querySelectorAll('article'))a.hidden=!a.querySelector('h2').textContent.toLowerCase().includes(e.target.value.toLowerCase())};document.querySelector('select').onchange=e=>document.body.style.setProperty('--paper',e.target.value);</script></body></html>''')
-print(f'Extracted {len(rows)} transparent original-ink illustrations, including framed Ten Hens.')
+</style></head><body><main><h1>Capitalism Plus · Original ink</h1><p>69 original-pixel extractions. Paper and shading become transparency; original pen strokes remain. Frames are supplied by the card layout, not baked into the illustrations.</p><input type="search" aria-label="Search cards" placeholder="Find a card"><label>Background <select><option value="#fff">White</option><option value="#f2e4c7">Warm paper</option><option value="#d7e9ee">Pale blue</option></select></label><div class="grid">''' + ''.join(rows) + '''</div></main><script>document.querySelector('input').oninput=e=>{for(const a of document.querySelectorAll('article'))a.hidden=!a.querySelector('h2').textContent.toLowerCase().includes(e.target.value.toLowerCase())};document.querySelector('select').onchange=e=>document.body.style.setProperty('--paper',e.target.value);</script></body></html>''')
+print(f'Extracted {len(rows)} transparent original-ink illustrations, with a single outer frame supplied by the card layout.')

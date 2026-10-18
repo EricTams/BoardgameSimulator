@@ -41,11 +41,14 @@ function CardFace({
   if (card?.name && !back)
     return (
       <div className={`card-face named-card ${small ? "small" : ""}`}>
-        <strong>{card.name}</strong>
+        <div className="card-title">
+          <strong>{card.name}</strong>
+          {card.suit && <span>{card.suit}</span>}
+        </div>
         {card.image && (
           <img src={cardImageUrl(card.image)} alt="" draggable={false} />
         )}
-        <span>{card.suit || "CARD"}</span>
+        <p className="card-rules">{card.text}</p>
       </div>
     );
   return (
@@ -90,11 +93,13 @@ function Modal({
   children,
   close,
   wide = false,
+  cardPreview = false,
 }: {
   title: string;
   children: React.ReactNode;
   close(): void;
   wide?: boolean;
+  cardPreview?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -103,14 +108,15 @@ function Modal({
   return (
     <dialog
       ref={ref}
-      className={`modal ${wide ? "wide-modal" : ""}`}
+      className={`modal ${wide ? "wide-modal" : ""} ${cardPreview ? "card-preview-modal" : ""}`}
+      aria-label={title}
       onCancel={close}
       onClick={(e) => {
         if (e.target === e.currentTarget) close();
       }}
     >
       <div className="modal-heading">
-        <h2>{title}</h2>
+        {!cardPreview && <h2>{title}</h2>}
         <button
           className="icon-button"
           aria-label="Close dialog"
@@ -843,8 +849,12 @@ export default function App() {
                         aria-label={`Read ${c.name || `${c.rank} ${c.suit}`}`}
                       >
                         <CardFace card={c} />
-                        <strong>{c.name || `${c.rank} ${c.suit}`}</strong>
-                        {c.text && <p>{c.text}</p>}
+                        {!c.name && (
+                          <>
+                            <strong>{`${c.rank} ${c.suit}`}</strong>
+                            {c.text && <p>{c.text}</p>}
+                          </>
+                        )}
                       </button>
                     ))}
                 </div>
@@ -1076,14 +1086,12 @@ export default function App() {
       {inspect && (
         <Modal
           title={inspect.name || `${inspect.rank} ${inspect.suit}`}
+          cardPreview={!!inspect.name}
           close={() => setInspect(null)}
         >
           <div className="card-detail">
             <CardFace card={inspect} />
-            {inspect.suit && inspect.name && (
-              <span className="tag">{inspect.suit}</span>
-            )}
-            <p>{inspect.text || "A standard playing card."}</p>
+            {!inspect.name && <p>{inspect.text || "A standard playing card."}</p>}
           </div>
         </Modal>
       )}

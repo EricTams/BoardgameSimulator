@@ -6,7 +6,7 @@ The current deck contains 69 cards from the six photographs in `ContentDrop-10-1
 - `catalog-source.mjs`: names, printed corner symbols, transcribed text, and crop coordinates in a 1368 × 1824 reference view.
 - `cards/`: 69 full card crops, including handwriting.
 - `illustrations/`: 69 illustrations cropped from original pixels, with paper retained. These are not regenerated images.
-- `transparent/`: 69 soft-alpha PNGs extracted from the original ink, used in the game. Ten Hens has an added thin frame.
+- `transparent/`: 69 soft-alpha PNGs extracted from the original ink, used in the game. The card layout supplies one outer frame; illustrations have no added frames.
 - `transparent-review.html`: original crops beside the transparent versions.
 - `cards.json`: generated catalog with illustration dimensions.
 - `review.html`: searchable side-by-side review of card crops, illustrations, and text.

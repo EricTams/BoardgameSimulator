@@ -152,6 +152,12 @@ test("host selects Capitalism Plus and displays prototype cards face up for ever
     await host.getByLabel("Display all cards face up", { exact: true }).check();
     await expect(host.locator(".spread-card")).toHaveCount(69);
     await expect(guest.locator(".spread-card")).toHaveCount(69);
+    await expect(guest.locator(".spread-card .card-title")).toHaveCount(69);
+    await expect(guest.locator(".spread-card .card-rules")).toHaveCount(69);
+    await expect(guest.locator(".spread-card > strong, .spread-card > p")).toHaveCount(0);
+    for (const [name, symbol] of [["Coin", "¢"], ["Ten Hens", "F"], ["Lizard Pal", "I"], ["Heist", "S"]]) {
+      await expect(guest.getByRole("button", { name: `Read ${name}`, exact: true }).locator(".card-title > span")).toHaveText(symbol);
+    }
     await guest
       .locator(".spread-card img")
       .evaluateAll((images) =>
@@ -172,6 +178,13 @@ test("host selects Capitalism Plus and displays prototype cards face up for ever
     await expect(guest.locator("dialog")).toContainText(
       "Block a targeted card or steal 2 cards.",
     );
+    await expect(guest.locator("dialog").getByText("Lizard Pal", { exact: true })).toHaveCount(1);
+    await expect(guest.locator("dialog .card-rules")).toHaveCount(1);
+    await expect(guest.locator("dialog .card-title > span")).toHaveText("I");
+    const artworkWidth = await guest.locator("dialog .named-card").evaluate(card => {
+      return card.querySelector("img")!.getBoundingClientRect().width / card.getBoundingClientRect().width;
+    });
+    expect(artworkWidth).toBeGreaterThan(.85);
     await guest.getByRole("button", { name: "Close dialog" }).click();
     await guest.getByLabel("Search face-up cards").fill("");
     await host.getByText("Deck options", { exact: true }).click();
