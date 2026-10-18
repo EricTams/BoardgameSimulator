@@ -28,7 +28,7 @@ const pack = {
 };
 for (const card of catalog.cards)
   await copyFile(
-    new URL(`art/capitalism-plus/${card.artwork}`, root),
+    new URL(`art/capitalism-plus/transparent/${card.id}.png`, root),
     new URL(`public/packs/capitalism-plus/${card.id}.png`, root),
   );
 await writeFile(
