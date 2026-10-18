@@ -163,3 +163,59 @@ describe("shared table", () => {
     ).toThrow();
   });
 });
+
+describe("game selection and face-up testing deck", () => {
+  it("only lets the host change packs and exposes the full catalog only while enabled", () => {
+    let r = room();
+    expect(viewFor(r, "player-1").browseCards).toBeUndefined();
+    expect(() =>
+      action(r, "player-1", { type: "loadPack", pack: GO_FISH }),
+    ).toThrow();
+    expect(() =>
+      action(r, "player-1", { type: "setDeckBrowsing", enabled: true }),
+    ).toThrow();
+    expect(() =>
+      action(r, "alice", { type: "setDeckBrowsing", enabled: "true" }),
+    ).toThrow();
+    r = action(r, "alice", { type: "setDeckBrowsing", enabled: true });
+    r = action(r, "alice", { type: "setup" });
+    r = action(r, "player-1", { type: "draw" });
+    const before = structuredClone(r);
+    const v = viewFor(r, "player-1");
+    expect(v.browseCards?.map((c) => c.id)).toEqual(
+      GO_FISH.cards.map((c) => c.key),
+    );
+    expect(v.browseCards).toHaveLength(52);
+    expect(v).not.toHaveProperty("deck");
+    expect(v.browseCards?.[0]).not.toHaveProperty("owner");
+    r = action(r, "alice", { type: "setDeckBrowsing", enabled: false });
+    expect(viewFor(r, "player-1").browseCards).toBeUndefined();
+    expect(r.deck).toEqual(before.deck);
+    expect(r.hands).toEqual(before.hands);
+    expect(() =>
+      action(r, "alice", { type: "loadPack", pack: GO_FISH }),
+    ).toThrow();
+  });
+  it("preserves card text and validates local artwork paths", async () => {
+    const { BUILTIN_PACKS } = await import("./packs");
+    const pack = BUILTIN_PACKS.find((p) => p.id === "capitalism-plus")!;
+    let r = action(room(), "alice", { type: "loadPack", pack });
+    r = action(r, "alice", { type: "setDeckBrowsing", enabled: true });
+    r = action(r, "alice", { type: "setup" });
+    expect(r.deck).toHaveLength(44);
+    expect(r.hands.alice).toHaveLength(0);
+    expect(viewFor(r, "player-1").browseCards?.[0].name).toBe("Balanced Diet");
+    expect(viewFor(r, "player-1").browseCards?.[0].text).toContain(
+      "Discard your hand",
+    );
+    expect(() =>
+      parsePack({
+        ...pack,
+        cards: [{ ...pack.cards[0], image: "packs/../../secret.png" }],
+      }),
+    ).toThrow();
+    expect(() =>
+      parsePack({ ...pack, cards: [{ ...pack.cards[0], text: 42 }] }),
+    ).toThrow();
+  });
+});

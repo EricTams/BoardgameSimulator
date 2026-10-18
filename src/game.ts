@@ -6,6 +6,8 @@ export type CardDef = {
   suit: string;
   color: string;
   image?: string;
+  name?: string;
+  text?: string;
 };
 export type Pack = {
   id: string;
@@ -60,6 +62,7 @@ export type Room = {
   hostId: string;
   pack: Pack;
   started: boolean;
+  deckBrowsing: boolean;
   revision: number;
   players: Player[];
   deck: string[];
@@ -76,7 +79,15 @@ export type View = {
   you: string;
   started: boolean;
   revision: number;
-  pack: { id: string; name: string; description: string; backColor: string };
+  pack: {
+    id: string;
+    name: string;
+    description: string;
+    backColor: string;
+    setup: Pack["setup"];
+  };
+  deckBrowsing: boolean;
+  browseCards?: Card[];
   players: { id: string; name: string; connected: boolean; count: number }[];
   hand: Card[];
   deckCount: number;
@@ -87,6 +98,7 @@ export type View = {
 export type Action =
   | { type: "setup" | "shuffle" }
   | { type: "draw" }
+  | { type: "setDeckBrowsing"; enabled: boolean }
   | { type: "play"; ids: string[]; faceUp: boolean }
   | { type: "give"; ids: string[]; to: string }
   | { type: "take" | "flip" | "return"; id: string }
@@ -135,7 +147,14 @@ export function parsePack(raw: unknown): Pack {
       (c.image !== undefined &&
         (typeof c.image !== "string" ||
           c.image.length > 2000 ||
-          !/^https:\/\//.test(c.image)))
+          !(
+            /^https:\/\//.test(c.image) ||
+            /^packs\/[a-z0-9-]+\/[a-z0-9-]+\.png$/.test(c.image)
+          ))) ||
+      (c.name !== undefined &&
+        (typeof c.name !== "string" || c.name.length > 100)) ||
+      (c.text !== undefined &&
+        (typeof c.text !== "string" || c.text.length > 2000))
     ) {
       throw Error(
         "Each card needs a unique key, short rank/suit, hex color, and optional HTTPS image URL.",
@@ -148,6 +167,8 @@ export function parsePack(raw: unknown): Pack {
       suit: c.suit,
       color: c.color,
       ...(c.image ? { image: c.image } : {}),
+      ...(c.name ? { name: c.name } : {}),
+      ...(c.text ? { text: c.text } : {}),
     };
   });
   const tokens = p.tokens ?? [];
@@ -190,6 +211,7 @@ export function createRoom(code: string, host: Player): Room {
     hostId: host.id,
     pack: GO_FISH,
     started: false,
+    deckBrowsing: false,
     revision: 0,
     players: [host],
     deck: GO_FISH.cards.map((c) => c.key),
@@ -288,9 +310,24 @@ export function act(
       y: Math.max(12, Math.min(88, y)),
     };
   };
-  if (!r.started && a.type !== "setup" && a.type !== "loadPack")
+  if (
+    !r.started &&
+    a.type !== "setup" &&
+    a.type !== "loadPack" &&
+    a.type !== "setDeckBrowsing"
+  )
     throw Error("The host needs to deal first.");
   switch (a.type) {
+    case "setDeckBrowsing":
+      host();
+      if (typeof a.enabled !== "boolean")
+        throw Error("Invalid deck browsing setting.");
+      r.deckBrowsing = a.enabled;
+      note(
+        r,
+        `${player.name} ${a.enabled ? "enabled" : "disabled"} full-deck browsing for testing.`,
+      );
+      break;
     case "setup": {
       host();
       r.deck = shuffle(r.pack.cards.map((c) => c.key));
@@ -315,7 +352,10 @@ export function act(
         })),
       );
       r.started = true;
-      note(r, `${player.name} shuffled and dealt a new game.`);
+      note(
+        r,
+        `${player.name} ${count ? "shuffled and dealt a new game" : "shuffled the deck and opened the table"}.`,
+      );
       break;
     }
     case "loadPack":
@@ -421,7 +461,13 @@ export function viewFor(room: Room, who: string): View {
       name: room.pack.name,
       description: room.pack.description,
       backColor: room.pack.backColor,
+      setup: room.pack.setup,
     },
+    deckBrowsing: room.deckBrowsing === true,
+    // Catalog order only: never reveal draw order, ownership, or table handles.
+    ...(room.deckBrowsing
+      ? { browseCards: room.pack.cards.map((c) => ({ ...c, id: c.key })) }
+      : {}),
     players: room.players.map((p) => ({
       id: p.id,
       name: p.name,

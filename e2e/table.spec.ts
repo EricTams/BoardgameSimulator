@@ -118,3 +118,110 @@ test("custom pack loads, deals and shows movable tokens", async ({ page }) => {
   await page.keyboard.press("ArrowRight");
   await expect(page.locator(".token").first()).toHaveCSS("left", /.+/);
 });
+
+test("host selects Capitalism Plus and displays prototype cards face up for everyone", async ({
+  browser,
+}) => {
+  const hostContext = await browser.newContext();
+  const guestContext = await browser.newContext();
+  const host = await hostContext.newPage(),
+    guest = await guestContext.newPage();
+  try {
+    await host.goto("./");
+    await host
+      .getByLabel("First, what should we call you?")
+      .fill("Prototype host");
+    await host.getByRole("button", { name: "Create a table" }).click();
+    await expect(host.getByText("Table online")).toBeVisible();
+    await host.getByLabel("Choose a game").selectOption("capitalism-plus");
+    await expect(host.locator(".room-heading h1")).toContainText(
+      "Capitalism Plus",
+    );
+    const code = await host.locator(".room-code").innerText();
+    await guest.goto(`./#/join/${code}`);
+    await guest
+      .getByLabel("First, what should we call you?")
+      .fill("Prototype guest");
+    await guest.getByRole("button", { name: "Join table" }).click();
+    await expect(guest.locator(".room-heading h1")).toContainText(
+      "Capitalism Plus",
+    );
+    await expect(guest.getByLabel("Choose a game")).toHaveCount(0);
+    await expect(host.locator(".deck-spread")).toHaveCount(0);
+    await host.getByText("Deck options", { exact: true }).click();
+    await host.getByLabel("Display all cards face up", { exact: true }).check();
+    await expect(host.locator(".spread-card")).toHaveCount(44);
+    await expect(guest.locator(".spread-card")).toHaveCount(44);
+    await guest
+      .locator(".spread-card img")
+      .evaluateAll((images) =>
+        Promise.all(images.map((i) => (i as HTMLImageElement).decode())),
+      );
+    expect(
+      await guest
+        .locator(".spread-card img")
+        .evaluateAll((images) =>
+          images.every((i) => (i as HTMLImageElement).naturalWidth > 0),
+        ),
+    ).toBe(true);
+    await guest.getByLabel("Search face-up cards").fill("Lizard Pal");
+    await expect(guest.locator(".spread-card")).toHaveCount(1);
+    await guest
+      .getByRole("button", { name: "Read Lizard Pal", exact: true })
+      .click();
+    await expect(guest.locator("dialog")).toContainText(
+      "Block a targeted card or steal 2 cards.",
+    );
+    await guest.getByRole("button", { name: "Close dialog" }).click();
+    await guest.getByLabel("Search face-up cards").fill("");
+    await host.getByText("Deck options", { exact: true }).click();
+    await host.getByRole("button", { name: "Shuffle & open table" }).click();
+    await expect(
+      guest.getByRole("button", { name: "Draw a card, 44 remaining" }),
+    ).toBeVisible();
+    await guest
+      .getByRole("button", { name: "Draw a card, 44 remaining" })
+      .click();
+    await expect(guest.locator(".hand-card")).toHaveCount(1);
+    await expect(guest.locator(".spread-card")).toHaveCount(44);
+    await guest.locator(".hand-card").click();
+    await guest.getByRole("button", { name: "Read card", exact: true }).click();
+    await expect(guest.locator(".card-detail img")).toBeVisible();
+    await guest.getByRole("button", { name: "Close dialog" }).click();
+    await guest
+      .getByRole("button", { name: "Play to table", exact: true })
+      .click();
+    await expect(host.locator(".table-card .named-card")).toHaveCount(1);
+    await host.screenshot({
+      path: "test-results/capitalism-game-desktop.png",
+      fullPage: true,
+    });
+    await guest.setViewportSize({ width: 390, height: 844 });
+    await guest.screenshot({
+      path: "test-results/capitalism-game-mobile.png",
+      fullPage: true,
+    });
+    expect(
+      await guest.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    await host.reload();
+    await expect(host.locator(".spread-card")).toHaveCount(44);
+    await expect(guest.getByText("Table online")).toBeVisible({
+      timeout: 20000,
+    });
+    await host.getByText("Deck options", { exact: true }).click();
+    await host
+      .getByLabel("Display all cards face up", { exact: true })
+      .uncheck();
+    await expect(guest.locator(".deck-spread")).toHaveCount(0);
+    await expect(
+      guest.getByRole("button", { name: "Draw a card, 43 remaining" }),
+    ).toBeVisible();
+    await expect(guest.locator(".table-card")).toHaveCount(1);
+  } finally {
+    await hostContext.close();
+    await guestContext.close();
+  }
+});

@@ -1,0 +1,409 @@
+{
+  "id": "capitalism-plus",
+  "name": "Capitalism Plus",
+  "description": "44 cards from your paper prototype. Draw, trade, and play your way.",
+  "backColor": "#557c69",
+  "cards": [
+    {
+      "key": "balanced-diet",
+      "rank": "1",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Balanced Diet",
+      "text": "Discard your hand and draw out of the discard pile for the rest of when this friend is in the land of the living.",
+      "image": "packs/capitalism-plus/balanced-diet.png"
+    },
+    {
+      "key": "auction",
+      "rank": "2",
+      "suit": "I",
+      "color": "#304f40",
+      "name": "Auction",
+      "text": "Force someone to sell their cards for a payment they will accept in the game.",
+      "image": "packs/capitalism-plus/auction.png"
+    },
+    {
+      "key": "recycle-diver",
+      "rank": "3",
+      "suit": "S",
+      "color": "#304f40",
+      "name": "Recycle Diver",
+      "text": "Steal 2 cards from the discard pile.",
+      "image": "packs/capitalism-plus/recycle-diver.png"
+    },
+    {
+      "key": "disarm",
+      "rank": "4",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Disarm",
+      "text": "Play without your thumbs or give your hand away.",
+      "image": "packs/capitalism-plus/disarm.png"
+    },
+    {
+      "key": "lizard-pal",
+      "rank": "5",
+      "suit": "I",
+      "color": "#304f40",
+      "name": "Lizard Pal",
+      "text": "Block a targeted card or steal 2 cards.",
+      "image": "packs/capitalism-plus/lizard-pal.png"
+    },
+    {
+      "key": "crying-always-works",
+      "rank": "6",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Crying Always Works",
+      "text": "Make all other friends your friends.",
+      "image": "packs/capitalism-plus/crying-always-works.png"
+    },
+    {
+      "key": "lester-the-jester",
+      "rank": "7",
+      "suit": "★",
+      "color": "#426780",
+      "name": "Lester the Jester",
+      "text": "1 steal / 2 steals. You can steal a friend or item twice.",
+      "image": "packs/capitalism-plus/lester-the-jester.png"
+    },
+    {
+      "key": "vegas",
+      "rank": "8",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Vegas",
+      "text": "If you have over 4 cards in your hand, put your hand shuffled into the draw pile. Draw 5 cards.",
+      "image": "packs/capitalism-plus/vegas.png"
+    },
+    {
+      "key": "ten-hens",
+      "rank": "9",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Ten Hens",
+      "text": "Draw an additional card on your turn.",
+      "image": "packs/capitalism-plus/ten-hens.png"
+    },
+    {
+      "key": "taxor-taxer",
+      "rank": "10",
+      "suit": "S",
+      "color": "#304f40",
+      "name": "Taxor Taxer",
+      "text": "Steal 1 card from someone.",
+      "image": "packs/capitalism-plus/taxor-taxer.png"
+    },
+    {
+      "key": "pain-brain",
+      "rank": "11",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Pain Brain",
+      "text": "Discard a card. Draw 4 cards.",
+      "image": "packs/capitalism-plus/pain-brain.png"
+    },
+    {
+      "key": "jump-the-gun",
+      "rank": "12",
+      "suit": "S",
+      "color": "#304f40",
+      "name": "Jump the Gun",
+      "text": "Steal 2 cards from the draw pile.",
+      "image": "packs/capitalism-plus/jump-the-gun.png"
+    },
+    {
+      "key": "positivity",
+      "rank": "13",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Positivity",
+      "text": "Smile forever or discard a card.",
+      "image": "packs/capitalism-plus/positivity.png"
+    },
+    {
+      "key": "the-ring-king",
+      "rank": "14",
+      "suit": "★",
+      "color": "#426780",
+      "name": "The Ring King",
+      "text": "1 / used. Once in the game, you can discard your hand and draw up to cards discarded.",
+      "image": "packs/capitalism-plus/the-ring-king.png"
+    },
+    {
+      "key": "donations",
+      "rank": "15",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Donations",
+      "text": "When you draw additional cards, steal a card.",
+      "image": "packs/capitalism-plus/donations.png"
+    },
+    {
+      "key": "over-my-dead-body",
+      "rank": "16",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Over My Dead Body",
+      "text": "You cannot be stolen from. If someone tries to steal, instead you discard a card.",
+      "image": "packs/capitalism-plus/over-my-dead-body.png"
+    },
+    {
+      "key": "suggestions",
+      "rank": "17",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Suggestions",
+      "text": "Force someone to do any possible action once.",
+      "image": "packs/capitalism-plus/suggestions.png"
+    },
+    {
+      "key": "confuse",
+      "rank": "18",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Confuse",
+      "text": "Force someone to discard a friend or item.",
+      "image": "packs/capitalism-plus/confuse.png"
+    },
+    {
+      "key": "bodyguard",
+      "rank": "19",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Bodyguard",
+      "text": "If someone makes you discard a card instead discard this friend and draw a card.",
+      "image": "packs/capitalism-plus/bodyguard.png"
+    },
+    {
+      "key": "stem-cell",
+      "rank": "20",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Stem Cell",
+      "text": "Look at an opponent’s hand. Steal a card from them.",
+      "image": "packs/capitalism-plus/stem-cell.png"
+    },
+    {
+      "key": "wizard-vonblizzard",
+      "rank": "21",
+      "suit": "★",
+      "color": "#426780",
+      "name": "Wizard Vonblizzard",
+      "text": "Draw a card when a marked card is activated.",
+      "image": "packs/capitalism-plus/wizard-vonblizzard.png"
+    },
+    {
+      "key": "the-queen-of-3s",
+      "rank": "22",
+      "suit": "★",
+      "color": "#426780",
+      "name": "The Queen of 3s",
+      "text": "3 / 2 / 1. After being forced to discard 3 times all opponents discard 3 cards.",
+      "image": "packs/capitalism-plus/the-queen-of-3s.png"
+    },
+    {
+      "key": "night-knight",
+      "rank": "23",
+      "suit": "★",
+      "color": "#426780",
+      "name": "Night Knight",
+      "text": "Under 5 / 5 or more. If you have under 5 cards in your hand, you can choose to reroll when drawing at turn start.",
+      "image": "packs/capitalism-plus/night-knight.png"
+    },
+    {
+      "key": "leaf-thief",
+      "rank": "24",
+      "suit": "★",
+      "color": "#426780",
+      "name": "Leaf Thief",
+      "text": "1 block / 2 blocks. Block 2 accusations of stealing. Replenish blocks when you discard all of your cards.",
+      "image": "packs/capitalism-plus/leaf-thief.png"
+    },
+    {
+      "key": "cookie-jar",
+      "rank": "25",
+      "suit": "I",
+      "color": "#304f40",
+      "name": "Cookie Jar",
+      "text": "Counts as 2 cards when active.",
+      "image": "packs/capitalism-plus/cookie-jar.png"
+    },
+    {
+      "key": "flowers",
+      "rank": "26",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Flowers",
+      "text": "Take a card from the draw pile & the discard pile.",
+      "image": "packs/capitalism-plus/flowers.png"
+    },
+    {
+      "key": "nope",
+      "rank": "27",
+      "suit": "I",
+      "color": "#304f40",
+      "name": "Nope",
+      "text": "Block an action.",
+      "image": "packs/capitalism-plus/nope.png"
+    },
+    {
+      "key": "give-and-take",
+      "rank": "28",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Give and Take",
+      "text": "Swap hands with someone.",
+      "image": "packs/capitalism-plus/give-and-take.png"
+    },
+    {
+      "key": "take-them-down-with-you",
+      "rank": "29",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Take Them Down With You",
+      "text": "Force someone to go down to 2 cards. You go down to 3 cards.",
+      "image": "packs/capitalism-plus/take-them-down-with-you.png"
+    },
+    {
+      "key": "fair-and-square",
+      "rank": "30",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Fair & Square",
+      "text": "Steal a card from all opponents. Shuffle this card into the draw pile.",
+      "image": "packs/capitalism-plus/fair-and-square.png"
+    },
+    {
+      "key": "money",
+      "rank": "31",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Money",
+      "text": "Draw cards up to a number people can agree on. Put this card back in your hand.",
+      "image": "packs/capitalism-plus/money.png"
+    },
+    {
+      "key": "snake-oil",
+      "rank": "32",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Snake Oil",
+      "text": "If you successfully give this card to someone, they discard 3/4 of their hand and this card.",
+      "image": "packs/capitalism-plus/snake-oil.png"
+    },
+    {
+      "key": "crown",
+      "rank": "33",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Crown",
+      "text": "Discard 2 cards in someone’s hand. You discard 1 card.",
+      "image": "packs/capitalism-plus/crown.png"
+    },
+    {
+      "key": "vice-versa",
+      "rank": "34",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Vice Versa",
+      "text": "Force someone to discard a card. You draw a card.",
+      "image": "packs/capitalism-plus/vice-versa.png"
+    },
+    {
+      "key": "private-investigation",
+      "rank": "35",
+      "suit": "S",
+      "color": "#304f40",
+      "name": "Private Investigation",
+      "text": "Spy on someone’s hand.",
+      "image": "packs/capitalism-plus/private-investigation.png"
+    },
+    {
+      "key": "rumors",
+      "rank": "36",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Rumors",
+      "text": "Force someone to discard all friend cards in their hand.",
+      "image": "packs/capitalism-plus/rumors.png"
+    },
+    {
+      "key": "hand-it-over",
+      "rank": "37",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Hand It Over",
+      "text": "Draw 3 cards.",
+      "image": "packs/capitalism-plus/hand-it-over.png"
+    },
+    {
+      "key": "almost",
+      "rank": "38",
+      "suit": "I",
+      "color": "#304f40",
+      "name": "Almost",
+      "text": "Draw 4 cards. You cannot win this turn.",
+      "image": "packs/capitalism-plus/almost.png"
+    },
+    {
+      "key": "ignore",
+      "rank": "39",
+      "suit": "I",
+      "color": "#304f40",
+      "name": "Ignore",
+      "text": "Draw up to cards discarded from another card.",
+      "image": "packs/capitalism-plus/ignore.png"
+    },
+    {
+      "key": "split",
+      "rank": "40",
+      "suit": "S",
+      "color": "#304f40",
+      "name": "Split",
+      "text": "Steal a card from both the draw & discard pile.",
+      "image": "packs/capitalism-plus/split.png"
+    },
+    {
+      "key": "italy",
+      "rank": "41",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Italy",
+      "text": "Look at the top 3 cards in the draw pile. Put one in your hand.",
+      "image": "packs/capitalism-plus/italy.png"
+    },
+    {
+      "key": "kindness-of-my-heart",
+      "rank": "42",
+      "suit": "",
+      "color": "#304f40",
+      "name": "Kindness of My Heart",
+      "text": "Steal 3 cards. Next turn, give one back.",
+      "image": "packs/capitalism-plus/kindness-of-my-heart.png"
+    },
+    {
+      "key": "too-rich",
+      "rank": "43",
+      "suit": "F",
+      "color": "#304f40",
+      "name": "Too Rich",
+      "text": "Draw up to 4 cards when this is played. You must discard a card when you draw a card.",
+      "image": "packs/capitalism-plus/too-rich.png"
+    },
+    {
+      "key": "heist",
+      "rank": "44",
+      "suit": "S",
+      "color": "#304f40",
+      "name": "Heist",
+      "text": "Take as many cards from anywhere as you can.",
+      "image": "packs/capitalism-plus/heist.png"
+    }
+  ],
+  "setup": {
+    "smallHand": 0,
+    "largeHand": 0
+  },
+  "tokens": []
+}

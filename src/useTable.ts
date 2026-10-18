@@ -120,7 +120,7 @@ export function useTable(session: Session | null) {
       }
       try {
         if (m.t === "hello") {
-          if (m.protocol !== 1)
+          if (m.protocol !== 2)
             throw Error("Different app versions. Reload both browsers.");
           join(room, m.id, m.secret, m.name);
           for (const [old, who] of seats) if (who === m.id) seats.delete(old);
@@ -146,7 +146,7 @@ export function useTable(session: Session | null) {
         setStatus("Connected");
         setOnline(true);
         if (s.role === "host") publish();
-        else transport.send("host", { t: "hello", protocol: 1, ...s.identity });
+        else transport.send("host", { t: "hello", protocol: 2, ...s.identity });
       },
       message: receive,
       close(conn) {

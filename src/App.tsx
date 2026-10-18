@@ -26,6 +26,7 @@ import {
 import { QRCodeSVG } from "qrcode.react";
 import { GO_FISH, type Action, type Card, type View } from "./game";
 import { mode } from "./network";
+import { BUILTIN_PACKS, cardImageUrl } from "./packs";
 import { initialSession, newSession, useTable, type Session } from "./useTable";
 
 function CardFace({
@@ -37,6 +38,16 @@ function CardFace({
   back?: boolean;
   small?: boolean;
 }) {
+  if (card?.name && !back)
+    return (
+      <div className={`card-face named-card ${small ? "small" : ""}`}>
+        <strong>{card.name}</strong>
+        {card.image && (
+          <img src={cardImageUrl(card.image)} alt="" draggable={false} />
+        )}
+        <span>{card.suit || "CARD"}</span>
+      </div>
+    );
   return (
     <div
       className={`card-face ${back ? "card-back" : ""} ${small ? "small" : ""}`}
@@ -54,7 +65,7 @@ function CardFace({
             {card.image && (
               <img
                 className="card-art"
-                src={card.image}
+                src={cardImageUrl(card.image)}
                 alt=""
                 draggable={false}
               />
@@ -78,10 +89,12 @@ function Modal({
   title,
   children,
   close,
+  wide = false,
 }: {
   title: string;
   children: React.ReactNode;
   close(): void;
+  wide?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -90,7 +103,7 @@ function Modal({
   return (
     <dialog
       ref={ref}
-      className="modal"
+      className={`modal ${wide ? "wide-modal" : ""}`}
       onCancel={close}
       onClick={(e) => {
         if (e.target === e.currentTarget) close();
@@ -111,6 +124,39 @@ function Modal({
   );
 }
 
+function DeckOptions({
+  enabled,
+  disabled,
+  isHost,
+  change,
+}: {
+  enabled: boolean;
+  disabled: boolean;
+  isHost: boolean;
+  change(enabled: boolean): void;
+}) {
+  return (
+    <details className="deck-options">
+      <summary>Deck options</summary>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            checked={enabled}
+            disabled={disabled || !isHost}
+            onChange={(e) => change(e.target.checked)}
+          />{" "}
+          Display all cards face up
+        </label>
+        <p>
+          Testing only · shows the full pack to everyone. Cards stay where they
+          are.{!isHost && " The host controls this option."}
+        </p>
+      </div>
+    </details>
+  );
+}
+
 export default function App() {
   const [session, setSession] = useState<Session | null>(initialSession);
   const table = useTable(session);
@@ -127,11 +173,19 @@ export default function App() {
   const [target, setTarget] = useState("");
   const [activePiece, setActivePiece] = useState<string | null>(null);
   const [sort, setSort] = useState<"rank" | "suit">("rank");
+  const [deckSearch, setDeckSearch] = useState("");
+  const [inspect, setInspect] = useState<Card | null>(null);
   const file = useRef<HTMLInputElement>(null);
   const board = useRef<HTMLDivElement>(null);
   const v = table.view;
   const disabled = !table.online || table.pending;
   const isHost = session?.role === "host";
+  const noDeal =
+    v?.pack.setup?.smallHand === 0 && v?.pack.setup?.largeHand === 0;
+  useEffect(() => {
+    setInspect(null);
+    setDeckSearch("");
+  }, [v?.pack.id, v?.deckBrowsing]);
   const chosen = selected.filter((id) => v?.hand.some((c) => c.id === id));
   const others = v?.players.filter((p) => p.id !== v.you) ?? [];
   const recipient = others.some((p) => p.id === target)
@@ -246,11 +300,14 @@ export default function App() {
     "K",
   ];
   const cards = [...(v?.hand ?? [])].sort((a, b) =>
-    sort === "suit"
-      ? a.suit.localeCompare(b.suit) ||
-        rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank)
-      : rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank) ||
-        a.suit.localeCompare(b.suit),
+    a.name || b.name
+      ? (sort === "suit" ? a.suit.localeCompare(b.suit) : 0) ||
+        (a.name || a.rank).localeCompare(b.name || b.rank)
+      : sort === "suit"
+        ? a.suit.localeCompare(b.suit) ||
+          rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank)
+        : rankOrder.indexOf(a.rank) - rankOrder.indexOf(b.rank) ||
+          a.suit.localeCompare(b.suit),
   );
   const selectedPiece = v?.table.find((p) => p.id === activePiece);
 
@@ -445,6 +502,51 @@ export default function App() {
                 </button>
               </div>
             )}
+            {isHost && v && !v.started && (
+              <section className="game-picker">
+                <div>
+                  <label htmlFor="game-select">Choose a game</label>
+                  <p>Pick a pack before opening the table.</p>
+                </div>
+                <select
+                  id="game-select"
+                  disabled={disabled}
+                  value={
+                    BUILTIN_PACKS.some((p) => p.id === v.pack.id)
+                      ? v.pack.id
+                      : "custom"
+                  }
+                  onChange={(e) => {
+                    const pack = BUILTIN_PACKS.find(
+                      (p) => p.id === e.target.value,
+                    );
+                    if (pack) {
+                      send({ type: "loadPack", pack });
+                      setSelected([]);
+                      setActivePiece(null);
+                      setInspect(null);
+                      setDeckSearch("");
+                    }
+                  }}
+                >
+                  {BUILTIN_PACKS.map((pack) => (
+                    <option key={pack.id} value={pack.id}>
+                      {pack.name} · {pack.cards.length} cards
+                    </option>
+                  ))}
+                  {!BUILTIN_PACKS.some((p) => p.id === v.pack.id) && (
+                    <option value="custom">{v.pack.name} (custom)</option>
+                  )}
+                </select>
+                <button
+                  className="text-button"
+                  disabled={disabled}
+                  onClick={() => file.current?.click()}
+                >
+                  Import a pack
+                </button>
+              </section>
+            )}
             <div className="seats">
               {(v?.players ?? []).map((p, i) => (
                 <div
@@ -497,6 +599,14 @@ export default function App() {
                   <div className="lobby-card">
                     <CardFace back />
                   </div>
+                  <DeckOptions
+                    enabled={v?.deckBrowsing ?? false}
+                    disabled={disabled}
+                    isHost={isHost}
+                    change={(enabled) =>
+                      send({ type: "setDeckBrowsing", enabled })
+                    }
+                  />
                   <h2>
                     {isHost
                       ? "Everyone at the table?"
@@ -504,8 +614,10 @@ export default function App() {
                   </h2>
                   <p>
                     {isHost
-                      ? "Invite your friends, then shuffle up and deal."
-                      : "Your host will deal when everyone is ready."}
+                      ? noDeal
+                        ? "Start with the full deck. Players choose how many cards to draw."
+                        : "Invite your friends, then shuffle up and deal."
+                      : "Your host will open the table when everyone is ready."}
                   </p>
                   {isHost ? (
                     <button
@@ -514,9 +626,11 @@ export default function App() {
                       onClick={() => send({ type: "setup" })}
                     >
                       <Shuffle size={17} />
-                      {(v?.players.length ?? 0) < 2
-                        ? "Deal a practice hand"
-                        : "Shuffle & deal"}
+                      {noDeal
+                        ? "Shuffle & open table"
+                        : (v?.players.length ?? 0) < 2
+                          ? "Deal a practice hand"
+                          : "Shuffle & deal"}
                     </button>
                   ) : (
                     <span className="waiting-pill">Waiting for the host</span>
@@ -539,22 +653,34 @@ export default function App() {
                       {v.deckCount > 0 ? (
                         <CardFace back />
                       ) : (
-                        <span>
-                          All out
-                          <br />
-                          of fish.
-                        </span>
+                        <span>Empty deck</span>
                       )}
                     </button>
                     <strong>
                       Draw pile <span>{v.deckCount}</span>
                     </strong>
-                    <small>Tap to go fish</small>
+                    <small>
+                      {v.pack.id === "go-fish"
+                        ? "Tap to go fish"
+                        : "Tap to draw a card"}
+                    </small>
+                    <DeckOptions
+                      enabled={v.deckBrowsing}
+                      disabled={disabled}
+                      isHost={isHost}
+                      change={(enabled) =>
+                        send({ type: "setDeckBrowsing", enabled })
+                      }
+                    />
                   </div>
                   {v.table.length === 0 && (
                     <div className="table-empty">
                       <Layers size={28} strokeWidth={1} />
-                      <span>A place for your sets.</span>
+                      <span>
+                        {v.pack.id === "go-fish"
+                          ? "A place for your sets."
+                          : "Your shared play area."}
+                      </span>
                       <small>Select cards below to play them here.</small>
                     </div>
                   )}
@@ -565,7 +691,7 @@ export default function App() {
                       style={{ left: `${p.x}%`, top: `${p.y}%` }}
                       aria-label={
                         p.card
-                          ? `${p.card.rank} ${p.card.suit} on table`
+                          ? `${p.card.name || `${p.card.rank} ${p.card.suit}`} on table`
                           : "Face-down card on table"
                       }
                       disabled={disabled}
@@ -634,6 +760,11 @@ export default function App() {
                           ? `${selectedPiece.card.rank}${selectedPiece.card.suit}`
                           : "Face-down card"}
                       </span>
+                      {selectedPiece.card && (
+                        <button onClick={() => setInspect(selectedPiece.card!)}>
+                          Read card
+                        </button>
+                      )}
                       <button
                         disabled={disabled}
                         onClick={() =>
@@ -678,6 +809,53 @@ export default function App() {
               )}
             </div>
 
+            {v?.deckBrowsing && (
+              <section className="deck-spread" aria-label="Face-up deck">
+                <div className="spread-heading">
+                  <div>
+                    <h2>{v.pack.name} · face-up deck</h2>
+                    <p>
+                      Testing · all {v.browseCards?.length ?? 0} cards,
+                      including cards already drawn. This shows card designs,
+                      not who holds them or draw order.
+                    </p>
+                  </div>
+                  <input
+                    type="search"
+                    aria-label="Search face-up cards"
+                    placeholder="Find a card…"
+                    value={deckSearch}
+                    onChange={(e) => setDeckSearch(e.target.value)}
+                  />
+                </div>
+                <div className="spread-grid">
+                  {v.browseCards
+                    ?.filter((c) =>
+                      `${c.name || c.rank} ${c.suit} ${c.text || ""}`
+                        .toLowerCase()
+                        .includes(deckSearch.toLowerCase()),
+                    )
+                    .map((c) => (
+                      <button
+                        className="spread-card"
+                        key={c.id}
+                        onClick={() => setInspect(c)}
+                        aria-label={`Read ${c.name || `${c.rank} ${c.suit}`}`}
+                      >
+                        <CardFace card={c} />
+                        <strong>{c.name || `${c.rank} ${c.suit}`}</strong>
+                        {c.text && <p>{c.text}</p>}
+                      </button>
+                    ))}
+                </div>
+                {v.browseCards?.every(
+                  (c) =>
+                    !`${c.name || c.rank} ${c.suit} ${c.text || ""}`
+                      .toLowerCase()
+                      .includes(deckSearch.toLowerCase()),
+                ) && <p className="muted">No cards match your search.</p>}
+              </section>
+            )}
             <section className="hand-panel">
               <div className="hand-heading">
                 <h2>
@@ -690,7 +868,12 @@ export default function App() {
                     className="text-button"
                     onClick={() => setSort(sort === "rank" ? "suit" : "rank")}
                   >
-                    Sort: {sort}
+                    Sort:{" "}
+                    {v?.pack.id === "capitalism-plus"
+                      ? sort === "rank"
+                        ? "name"
+                        : "type"
+                      : sort}
                     <ChevronDown size={14} />
                   </button>
                 </div>
@@ -700,7 +883,7 @@ export default function App() {
                   cards.map((c) => (
                     <button
                       className={`hand-card ${chosen.includes(c.id) ? "selected" : ""}`}
-                      aria-label={`${c.rank} ${c.suit}`}
+                      aria-label={c.name || `${c.rank} ${c.suit}`}
                       aria-pressed={chosen.includes(c.id)}
                       key={c.id}
                       onClick={() =>
@@ -735,6 +918,16 @@ export default function App() {
                   )}
                 </span>
                 <div className="hand-actions">
+                  {chosen.length === 1 && (
+                    <button
+                      className="secondary"
+                      onClick={() =>
+                        setInspect(v!.hand.find((c) => c.id === chosen[0])!)
+                      }
+                    >
+                      Read card
+                    </button>
+                  )}
                   <button
                     className="secondary"
                     disabled={disabled || !chosen.length}
@@ -784,7 +977,11 @@ export default function App() {
             <div className="pack-card">
               <div className="eyebrow">ON THE TABLE</div>
               <div className="pack-illustration">
-                <Fish size={46} strokeWidth={1.3} />
+                {v?.pack.id === "go-fish" ? (
+                  <Fish size={46} strokeWidth={1.3} />
+                ) : (
+                  <Layers size={46} strokeWidth={1.3} />
+                )}
                 <span>✦</span>
               </div>
               <h2>{v?.pack.name ?? "Go Fish"}</h2>
@@ -817,7 +1014,8 @@ export default function App() {
                   disabled={disabled || !v?.started}
                   onClick={() => setModal("reset")}
                 >
-                  <RotateCcw size={17} /> Gather & redeal
+                  <RotateCcw size={17} />{" "}
+                  {noDeal ? "Gather & shuffle" : "Gather & redeal"}
                 </button>
               )}
               {isHost && !v?.started && (
@@ -875,6 +1073,20 @@ export default function App() {
         </main>
       )}
 
+      {inspect && (
+        <Modal
+          title={inspect.name || `${inspect.rank} ${inspect.suit}`}
+          close={() => setInspect(null)}
+        >
+          <div className="card-detail">
+            <CardFace card={inspect} />
+            {inspect.suit && inspect.name && (
+              <span className="tag">{inspect.suit}</span>
+            )}
+            <p>{inspect.text || "A standard playing card."}</p>
+          </div>
+        </Modal>
+      )}
       {modal === "invite" && (
         <Modal
           title="There’s room for your friends."
@@ -965,11 +1177,14 @@ export default function App() {
         </Modal>
       )}
       {modal === "reset" && (
-        <Modal title="Deal a fresh game?" close={() => setModal(null)}>
+        <Modal
+          title={noDeal ? "Reset the table?" : "Deal a fresh game?"}
+          close={() => setModal(null)}
+        >
           <p>
-            This gathers every card from all hands and the table, shuffles the
-            full deck, and deals new hands to everyone, including disconnected
-            players.
+            {noDeal
+              ? "This gathers all cards from every hand and the table back into a shuffled deck. Players can draw their own starting hands."
+              : "This gathers every card from all hands and the table, shuffles the full deck, and deals new hands to everyone, including disconnected players."}
           </p>
           <div className="modal-actions">
             <button className="secondary" onClick={() => setModal(null)}>
@@ -985,7 +1200,7 @@ export default function App() {
                 setModal(null);
               }}
             >
-              Shuffle & redeal
+              {noDeal ? "Gather & shuffle" : "Shuffle & redeal"}
             </button>
           </div>
         </Modal>

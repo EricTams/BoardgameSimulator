@@ -4,6 +4,14 @@ A small browser tabletop for friends. The app keeps the cards in sync; players d
 
 **Play:** https://erictams.github.io/BoardgameSimulator/
 
+## Games and testing
+
+The host can select **Go Fish**, **Capitalism Plus**, or **Garden Club** in the lobby. Capitalism Plus includes all 44 prototype cards with original extracted artwork and transcribed text. It starts with a shuffled deck and empty hands; players draw and set up as they prefer. Select a card in your hand, or tap a face-up table card, then choose **Read card** for its full text.
+
+Under the deck, open **Deck options → Display all cards face up**. This host-controlled testing option is off by default and shows the full pack to every player in a searchable face-up spread. It does not move cards, reveal hand ownership, or expose draw order. Turning it off removes the spread from every screen. The setting survives a host reload.
+
+To update prototype artwork/text, edit the source catalog, regenerate with `node scripts/extract-capitalism.mjs`, and then run `node scripts/build-capitalism-pack.mjs`. The last command copies the illustrations into the published app and generates its pack definition. Replace those illustration files and update the pack definition directly if new artwork is already prepared.
+
 ## First playable
 
 - Create a table and invite friends with a room code, link, or QR code. Up to 8 seats; no accounts.
@@ -58,7 +66,7 @@ This serves the app and `/rooms` WebSocket endpoint on port 4173 (override with 
 
 Before dealing, the host can use **Load a game pack** to select a JSON file. The pack is sent through the host; everyone gets the same artwork definitions for the cards they can see. No custom scripts execute.
 
-Fields: `id`, `name`, `description`, `backColor`, `cards`, `setup`, and `tokens`. Each card has a unique `key`, a short `rank`/`suit`, hex `color`, and optional `image` HTTPS URL. Images must be hosted somewhere all players can reach. Setup defines `smallHand` (up to 3 players) and `largeHand` (4–8). Tokens define `label`, `color`, and `count` and can be freely moved. Limits: 200 cards, 20 token types, 10 copies per token type, and a 500 KB JSON file.
+Fields: `id`, `name`, `description`, `backColor`, `cards`, `setup`, and `tokens`. Each card has a unique `key`, a short `rank`/`suit`, hex `color`, and optional `name`, `text`, and `image`. Images can be HTTPS URLs or bundled paths such as `packs/capitalism-plus/lizard-pal.png`. Images must be hosted somewhere all players can reach. Setup defines `smallHand` (up to 3 players) and `largeHand` (4–8). Tokens define `label`, `color`, and `count` and can be freely moved. Limits: 200 cards, 20 token types, 10 copies per token type, and a 500 KB JSON file.
 
 This first version supports card and token packs; custom board backgrounds, pack authoring UI, ZIP assets, complex setup scripts, and a marketplace are future work.
 
