@@ -1,26 +1,21 @@
 # Capitalism Plus card assets
 
-44 identifiable cards from the two original photographs in `/Users/erictams/AIDev/BoardgameSimulator/CapitalismPlus`. The originals were copied into this project without alteration.
+The current deck contains 69 cards from the six photographs in `ContentDrop-10-18-2026`, supplied October 18, 2026. This set replaces the previous 44-card prototype in full.
 
-Open **review.html** to browse the original card crops, extracted illustrations, names, markers, and readable text. Search by card name or wording. Source notes concern unclear lettering, crossed-out titles, or artwork clipped in the original photograph.
+- `source/`: six unaltered source photographs.
+- `catalog-source.mjs`: names, printed corner symbols, transcribed text, and crop coordinates in a 1368 × 1824 reference view.
+- `cards/`: 69 full card crops, including handwriting.
+- `illustrations/`: 69 illustrations cropped from original pixels, with paper retained. These are not regenerated images.
+- `cards.json`: generated catalog with illustration dimensions.
+- `review.html`: searchable side-by-side review of card crops, illustrations, and text.
 
-- `source/`: the two original JPEG photographs.
-- `cards/`: 44 individual card crops, including their handwriting.
-- `illustrations/`: 44 illustration PNGs extracted from the original pixels. Paper/shading remain. Three outline crops separate art from nearby lettering. These are small photographic assets, not regenerated or high-resolution redraws.
-- `cards.json`: machine-readable card names, text, literal corner markers, image paths, source coordinates, and transcription notes.
-- `catalog-source.mjs`: editable transcription and extraction coordinates used to generate the outputs.
-- `review.html`: self-contained review interface using relative image paths; opens locally without a server.
+Card text is transcribed as written with normalized punctuation and spelling-only cleanup in display text. Effects and usage counters are descriptive; players manage all rules and turns. Source notes identify the crossed-out Suggestions title and the unusual handwritten title Roast Fleast.
 
-Card wording is preserved, with only punctuation/capitalization and minor spelling cleanup. `sourceText` retains the manual transcription; `text` is the display version. Rules are left to the players. There is no rule interpretation, validation, balancing, or automation in these assets.
-
-The title **Taxor Taxer** and the spelling of **Wizard Vonblizzard** are uncertain. Lester's illustration is cut off at the top of its source photo; Heist is cut off at the right edge. Narrow, unidentifiable card fragments at the left edge of the first photo are excluded. The extraction does not invent those missing pixels.
-
-To regenerate after changing coordinates or transcription:
+Regenerate with:
 
 ```sh
-npm ci
-npx playwright install chromium
 node scripts/extract-capitalism.mjs
+node scripts/build-capitalism-pack.mjs
 ```
 
-Run `node scripts/build-capitalism-pack.mjs` after regenerating to update the built-in Gather pack and its published artwork. The host can select Capitalism Plus in the lobby and enable the deck’s face-up testing option to review all 44 cards.
+The second script updates the built-in game pack and published illustrations. When removing cards in future drops, also remove their obsolete generated images. The host can choose Capitalism Plus and enable **Display all cards face up** in the deck options to review the complete set.

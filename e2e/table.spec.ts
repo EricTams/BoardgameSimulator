@@ -150,8 +150,8 @@ test("host selects Capitalism Plus and displays prototype cards face up for ever
     await expect(host.locator(".deck-spread")).toHaveCount(0);
     await host.getByText("Deck options", { exact: true }).click();
     await host.getByLabel("Display all cards face up", { exact: true }).check();
-    await expect(host.locator(".spread-card")).toHaveCount(44);
-    await expect(guest.locator(".spread-card")).toHaveCount(44);
+    await expect(host.locator(".spread-card")).toHaveCount(69);
+    await expect(guest.locator(".spread-card")).toHaveCount(69);
     await guest
       .locator(".spread-card img")
       .evaluateAll((images) =>
@@ -177,13 +177,13 @@ test("host selects Capitalism Plus and displays prototype cards face up for ever
     await host.getByText("Deck options", { exact: true }).click();
     await host.getByRole("button", { name: "Shuffle & open table" }).click();
     await expect(
-      guest.getByRole("button", { name: "Draw a card, 44 remaining" }),
+      guest.getByRole("button", { name: "Draw a card, 69 remaining" }),
     ).toBeVisible();
     await guest
-      .getByRole("button", { name: "Draw a card, 44 remaining" })
+      .getByRole("button", { name: "Draw a card, 69 remaining" })
       .click();
     await expect(guest.locator(".hand-card")).toHaveCount(1);
-    await expect(guest.locator(".spread-card")).toHaveCount(44);
+    await expect(guest.locator(".spread-card")).toHaveCount(69);
     await guest.locator(".hand-card").click();
     await guest.getByRole("button", { name: "Read card", exact: true }).click();
     await expect(guest.locator(".card-detail img")).toBeVisible();
@@ -207,7 +207,7 @@ test("host selects Capitalism Plus and displays prototype cards face up for ever
       ),
     ).toBe(true);
     await host.reload();
-    await expect(host.locator(".spread-card")).toHaveCount(44);
+    await expect(host.locator(".spread-card")).toHaveCount(69);
     await expect(guest.getByText("Table online")).toBeVisible({
       timeout: 20000,
     });
@@ -217,7 +217,7 @@ test("host selects Capitalism Plus and displays prototype cards face up for ever
       .uncheck();
     await expect(guest.locator(".deck-spread")).toHaveCount(0);
     await expect(
-      guest.getByRole("button", { name: "Draw a card, 43 remaining" }),
+      guest.getByRole("button", { name: "Draw a card, 68 remaining" }),
     ).toBeVisible();
     await expect(guest.locator(".table-card")).toHaveCount(1);
   } finally {

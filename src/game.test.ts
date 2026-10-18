@@ -202,12 +202,17 @@ describe("game selection and face-up testing deck", () => {
     let r = action(room(), "alice", { type: "loadPack", pack });
     r = action(r, "alice", { type: "setDeckBrowsing", enabled: true });
     r = action(r, "alice", { type: "setup" });
-    expect(r.deck).toHaveLength(44);
+    expect(r.deck).toHaveLength(69);
     expect(r.hands.alice).toHaveLength(0);
-    expect(viewFor(r, "player-1").browseCards?.[0].name).toBe("Balanced Diet");
-    expect(viewFor(r, "player-1").browseCards?.[0].text).toContain(
+    const cards = viewFor(r, "player-1").browseCards!;
+    expect(cards.find(c => c.name === "Balanced Diet")?.text).toContain(
       "Discard your hand",
     );
+    expect(cards.find(c => c.name === "Pain Brain")?.text).toBe(
+      "Discard 2 cards. Draw 4 cards.",
+    );
+    expect(cards.some(c => c.name === "Guard Cat")).toBe(true);
+    expect(cards.some(c => c.name === "Lester the Jester")).toBe(false);
     expect(() =>
       parsePack({
         ...pack,

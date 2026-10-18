@@ -1,1342 +1,2645 @@
 {
   "schemaVersion": 1,
-  "title": "Capitalism Plus — card text and original illustrations",
+  "title": "Capitalism Plus — October 18, 2026 card set",
   "status": "Manual transcription. Players interpret and apply the printed effects.",
   "referenceSize": {
-    "width": 1824,
-    "height": 1369
+    "width": 1368,
+    "height": 1824
   },
-  "sourceDirectory": "/Users/erictams/AIDev/BoardgameSimulator/CapitalismPlus",
+  "sourceDirectory": "/Users/erictams/AIDev/BoardgameSimulator/CapitalismPlus/ContentDrop-10-18-2026",
   "conventions": {
-    "sourceText": "Manual transcription of legible text; capitalization, line breaks, and punctuation normalized. Original effects preserved, without interpreting rules.",
-    "marker": "Literal visible corner letter, preserved without interpretation. Blue character cards retain their printed counters.",
-    "artwork": "Original source pixels with paper retained. Most crops are rectangular; three use an outline to separate illustrations from nearby title lettering. No redrawing, upscaling, or invented missing content.",
-    "omissions": "Unidentifiable slivers at the left edge of photo 3A607… are not cataloged as additional cards.",
+    "sourceText": "Manual transcription of the latest six photographs; capitalization, line breaks, and punctuation normalized. Printed effects preserved without interpreting rules.",
+    "marker": "Visible corner symbols, preserved without interpretation.",
+    "artwork": "Original source pixels with paper retained. No generated or redrawn artwork.",
     "text": "Display text with spelling-only cleanup; no rewritten mechanics."
   },
   "cards": [
     {
-      "id": "balanced-diet",
-      "name": "Balanced Diet",
-      "marker": "F",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        43,
-        233,
-        211,
-        338
-      ],
-      "artBounds": [
-        51,
-        279,
-        184,
-        109
-      ],
-      "sourceText": "Discard your hand and draw out of the discard pile for the rest of when this friend is in the land of the living.",
-      "cardImage": "cards/balanced-diet.png",
-      "artwork": "illustrations/balanced-diet.png",
-      "text": "Discard your hand and draw out of the discard pile for the rest of when this friend is in the land of the living.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 207,
-        "height": 123
-      }
-    },
-    {
-      "id": "auction",
-      "name": "Auction",
+      "id": "almost",
+      "name": "Almost",
       "marker": "I",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
       "cardBounds": [
-        286,
-        198,
-        211,
-        342
-      ],
-      "artBounds": [
-        298,
-        250,
-        185,
-        111
-      ],
-      "sourceText": "Force someone to sell their cards for a payment they will accept in the game.",
-      "cardImage": "cards/auction.png",
-      "artwork": "illustrations/auction.png",
-      "text": "Force someone to sell their cards for a payment they will accept in the game.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 207,
-        "height": 125
-      }
-    },
-    {
-      "id": "recycle-diver",
-      "name": "Recycle Diver",
-      "marker": "S",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        545,
-        208,
-        207,
-        336
-      ],
-      "artBounds": [
-        566,
-        251,
-        164,
-        119
-      ],
-      "sourceText": "Steal 2 cards from the discard pile.",
-      "cardImage": "cards/recycle-diver.png",
-      "artwork": "illustrations/recycle-diver.png",
-      "text": "Steal 2 cards from the discard pile.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 184,
-        "height": 134
-      }
-    },
-    {
-      "id": "disarm",
-      "name": "Disarm",
-      "marker": "F",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        804,
-        197,
-        205,
-        341
-      ],
-      "artBounds": [
-        818,
-        263,
-        177,
-        91
-      ],
-      "sourceText": "Play without your thumbs or give your hand away.",
-      "cardImage": "cards/disarm.png",
-      "artwork": "illustrations/disarm.png",
-      "text": "Play without your thumbs or give your hand away.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 199,
-        "height": 103
-      }
-    },
-    {
-      "id": "lizard-pal",
-      "name": "Lizard Pal",
-      "marker": "I",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1036,
-        189,
-        217,
-        343
-      ],
-      "artBounds": [
-        1081,
-        235,
-        155,
-        115
-      ],
-      "sourceText": "Block a targetted card or steal 2 cards.",
-      "cardImage": "cards/lizard-pal.png",
-      "artwork": "illustrations/lizard-pal.png",
-      "text": "Block a targeted card or steal 2 cards.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 174,
-        "height": 129
-      }
-    },
-    {
-      "id": "crying-always-works",
-      "name": "Crying Always Works",
-      "marker": null,
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1281,
-        105,
-        205,
-        335
-      ],
-      "artBounds": [
-        1291,
-        156,
-        183,
-        97
-      ],
-      "sourceText": "Make all other friends your friends.",
-      "cardImage": "cards/crying-always-works.png",
-      "artwork": "illustrations/crying-always-works.png",
-      "text": "Make all other friends your friends.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artPolygon": [
-        [
-          1361,
-          156
-        ],
-        [
-          1474,
-          156
-        ],
-        [
-          1474,
-          253
-        ],
-        [
-          1291,
-          253
-        ],
-        [
-          1291,
-          171
-        ],
-        [
-          1361,
-          171
-        ]
-      ],
-      "artworkSize": {
-        "width": 205,
-        "height": 109
-      }
-    },
-    {
-      "id": "lester-the-jester",
-      "name": "Lester the Jester",
-      "marker": "character",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1491,
-        0,
-        217,
-        288
-      ],
-      "artBounds": [
-        1515,
-        0,
-        182,
-        104
-      ],
-      "sourceText": "1 steal / 2 steals. You can steal a friend or item twice.",
-      "cardImage": "cards/lester-the-jester.png",
-      "artwork": "illustrations/lester-the-jester.png",
-      "text": "1 steal / 2 steals. You can steal a friend or item twice.",
-      "notes": [
-        "The top of the illustration is cut off in the original photograph."
-      ],
-      "reviewStatus": "check-source",
-      "artworkSize": {
-        "width": 204,
-        "height": 117
-      }
-    },
-    {
-      "id": "vegas",
-      "name": "Vegas",
-      "marker": null,
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        35,
-        587,
-        215,
-        347
-      ],
-      "artBounds": [
-        45,
-        642,
-        190,
-        109
-      ],
-      "sourceText": "If you have over 4 cards in your hand, put your hand shuffled into the draw pile. Draw 5 cards.",
-      "cardImage": "cards/vegas.png",
-      "artwork": "illustrations/vegas.png",
-      "text": "If you have over 4 cards in your hand, put your hand shuffled into the draw pile. Draw 5 cards.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 213,
-        "height": 123
-      }
-    },
-    {
-      "id": "ten-hens",
-      "name": "Ten Hens",
-      "marker": "F",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        254,
-        588,
-        231,
-        359
-      ],
-      "artBounds": [
-        267,
-        637,
-        187,
-        110
-      ],
-      "sourceText": "Draw an additional card on your turn.",
-      "cardImage": "cards/ten-hens.png",
-      "artwork": "illustrations/ten-hens.png",
-      "text": "Draw an additional card on your turn.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 210,
-        "height": 123
-      }
-    },
-    {
-      "id": "taxor-taxer",
-      "name": "Taxor Taxer",
-      "marker": "S",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        529,
-        578,
-        216,
-        345
-      ],
-      "artBounds": [
-        554,
-        618,
-        179,
-        123
-      ],
-      "sourceText": "Steal 1 card from someone.",
-      "cardImage": "cards/taxor-taxer.png",
-      "artwork": "illustrations/taxor-taxer.png",
-      "text": "Steal 1 card from someone.",
-      "notes": [
-        "Title is uncertain: appears to read “Taxor Taxer.” The illustration includes a “Normal Hand” annotation."
-      ],
-      "reviewStatus": "check-source",
-      "artworkSize": {
-        "width": 201,
-        "height": 138
-      }
-    },
-    {
-      "id": "pain-brain",
-      "name": "Pain Brain",
-      "marker": null,
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        775,
-        551,
-        229,
-        353
-      ],
-      "artBounds": [
-        801,
-        606,
-        185,
-        106
-      ],
-      "sourceText": "Discard a card. Draw 4 cards.",
-      "cardImage": "cards/pain-brain.png",
-      "artwork": "illustrations/pain-brain.png",
-      "text": "Discard a card. Draw 4 cards.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 208,
-        "height": 119
-      }
-    },
-    {
-      "id": "jump-the-gun",
-      "name": "Jump the Gun",
-      "marker": "S",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1024,
-        544,
-        226,
-        351
-      ],
-      "artBounds": [
-        1058,
-        620,
-        177,
-        75
-      ],
-      "sourceText": "Steal 2 cards from the draw pile.",
-      "cardImage": "cards/jump-the-gun.png",
-      "artwork": "illustrations/jump-the-gun.png",
-      "text": "Steal 2 cards from the draw pile.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 199,
-        "height": 84
-      }
-    },
-    {
-      "id": "positivity",
-      "name": "Positivity",
-      "marker": "F",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1264,
-        458,
-        220,
-        350
-      ],
-      "artBounds": [
-        1284,
-        510,
-        175,
-        107
-      ],
-      "sourceText": "Smile forever or discard a card.",
-      "cardImage": "cards/positivity.png",
-      "artwork": "illustrations/positivity.png",
-      "text": "Smile forever or discard a card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 196,
-        "height": 120
-      }
-    },
-    {
-      "id": "the-ring-king",
-      "name": "The Ring King",
-      "marker": "character",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1505,
-        301,
-        217,
-        346
-      ],
-      "artBounds": [
-        1528,
-        328,
-        158,
-        130
-      ],
-      "sourceText": "1 / used. Once in the game, you can discard your hand and draw up to cards discarded.",
-      "cardImage": "cards/the-ring-king.png",
-      "artwork": "illustrations/the-ring-king.png",
-      "text": "1 / used. Once in the game, you can discard your hand and draw up to cards discarded.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 177,
-        "height": 147
-      }
-    },
-    {
-      "id": "donations",
-      "name": "Donations",
-      "marker": "F",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        32,
-        962,
-        209,
-        347
-      ],
-      "artBounds": [
-        44,
-        997,
-        182,
-        120
-      ],
-      "sourceText": "When you draw additional cards, steal a card.",
-      "cardImage": "cards/donations.png",
-      "artwork": "illustrations/donations.png",
-      "text": "When you draw additional cards, steal a card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 205,
-        "height": 135
-      }
-    },
-    {
-      "id": "over-my-dead-body",
-      "name": "Over My Dead Body",
-      "marker": "F",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        263,
-        950,
-        241,
-        364
-      ],
-      "artBounds": [
-        315,
-        1022,
-        153,
-        102
-      ],
-      "sourceText": "You cannot be stolen from. If someone tries to steal, instead you discard a card.",
-      "cardImage": "cards/over-my-dead-body.png",
-      "artwork": "illustrations/over-my-dead-body.png",
-      "text": "You cannot be stolen from. If someone tries to steal, instead you discard a card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 171,
-        "height": 115
-      }
-    },
-    {
-      "id": "suggestions",
-      "name": "Suggestions",
-      "marker": null,
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        519,
-        970,
-        216,
-        350
-      ],
-      "artBounds": [
-        530,
-        1017,
-        186,
-        123
-      ],
-      "sourceText": "Force someone to do any possible action once.",
-      "cardImage": "cards/suggestions.png",
-      "artwork": "illustrations/suggestions.png",
-      "text": "Force someone to do any possible action once.",
-      "notes": [
-        "The earlier title “Threats” is crossed out; the replacement title is “Suggestions.”"
-      ],
-      "reviewStatus": "check-source",
-      "artworkSize": {
-        "width": 209,
-        "height": 138
-      }
-    },
-    {
-      "id": "confuse",
-      "name": "Confuse",
-      "marker": null,
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        764,
-        935,
-        208,
-        348
-      ],
-      "artBounds": [
-        773,
-        975,
-        191,
-        116
-      ],
-      "sourceText": "Force someone to discard a friend or item.",
-      "cardImage": "cards/confuse.png",
-      "artwork": "illustrations/confuse.png",
-      "text": "Force someone to discard a friend or item.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 214,
-        "height": 131
-      }
-    },
-    {
-      "id": "bodyguard",
-      "name": "Bodyguard",
-      "marker": "F",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1002,
-        889,
-        228,
-        358
-      ],
-      "artBounds": [
-        1050,
-        949,
-        151,
-        110
-      ],
-      "sourceText": "If someone makes you discard a card instead discard this friend and draw a card.",
-      "cardImage": "cards/bodyguard.png",
-      "artwork": "illustrations/bodyguard.png",
-      "text": "If someone makes you discard a card instead discard this friend and draw a card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 169,
-        "height": 124
-      }
-    },
-    {
-      "id": "stem-cell",
-      "name": "Stem Cell",
-      "marker": null,
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1247,
-        828,
-        218,
-        348
-      ],
-      "artBounds": [
-        1263,
-        874,
-        180,
-        119
-      ],
-      "sourceText": "Look at an opponent’s hand. Steal a card from them.",
-      "cardImage": "cards/stem-cell.png",
-      "artwork": "illustrations/stem-cell.png",
-      "text": "Look at an opponent’s hand. Steal a card from them.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 202,
-        "height": 134
-      }
-    },
-    {
-      "id": "wizard-vonblizzard",
-      "name": "Wizard Vonblizzard",
-      "marker": "character",
-      "source": "source/3A607E9C-D724-4F5E-9616-3CCA9A794F43.jpg",
-      "cardBounds": [
-        1486,
-        662,
-        215,
-        349
-      ],
-      "artBounds": [
-        1497,
-        668,
-        187,
-        147
-      ],
-      "sourceText": "Draw a card when a marked card is activated.",
-      "cardImage": "cards/wizard-vonblizzard.png",
-      "artwork": "illustrations/wizard-vonblizzard.png",
-      "text": "Draw a card when a marked card is activated.",
-      "notes": [
-        "Surname spelling is uncertain; transcribed as “Vonblizzard.”"
-      ],
-      "reviewStatus": "check-source",
-      "artworkSize": {
-        "width": 210,
-        "height": 166
-      }
-    },
-    {
-      "id": "the-queen-of-3s",
-      "name": "The Queen of 3s",
-      "marker": "character",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        88,
-        30,
-        216,
-        318
-      ],
-      "artBounds": [
-        112,
-        46,
-        171,
-        130
-      ],
-      "sourceText": "3 / 2 / 1. After being forced to discard 3 times all opponents discard 3 cards.",
-      "cardImage": "cards/the-queen-of-3s.png",
-      "artwork": "illustrations/the-queen-of-3s.png",
-      "text": "3 / 2 / 1. After being forced to discard 3 times all opponents discard 3 cards.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 192,
-        "height": 146
-      }
-    },
-    {
-      "id": "night-knight",
-      "name": "Night Knight",
-      "marker": "character",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        73,
-        351,
-        219,
-        327
-      ],
-      "artBounds": [
-        97,
-        369,
-        177,
-        129
-      ],
-      "sourceText": "Under 5 / 5 or more. If you have under 5 cards in your hand, you can choose to reroll when drawing at turn start.",
-      "cardImage": "cards/night-knight.png",
-      "artwork": "illustrations/night-knight.png",
-      "text": "Under 5 / 5 or more. If you have under 5 cards in your hand, you can choose to reroll when drawing at turn start.",
-      "notes": [
-        "The handwritten word appears to be “reroll.” Preserved as written."
-      ],
-      "reviewStatus": "check-source",
-      "artworkSize": {
-        "width": 199,
-        "height": 144
-      }
-    },
-    {
-      "id": "leaf-thief",
-      "name": "Leaf Thief",
-      "marker": "character",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        46,
-        662,
-        224,
-        324
-      ],
-      "artBounds": [
-        70,
-        680,
-        181,
-        134
-      ],
-      "sourceText": "1 block / 2 blocks. Block 2 accusations of stealing. Replenish blocks when you discard all of your cards.",
-      "cardImage": "cards/leaf-thief.png",
-      "artwork": "illustrations/leaf-thief.png",
-      "text": "1 block / 2 blocks. Block 2 accusations of stealing. Replenish blocks when you discard all of your cards.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 203,
-        "height": 150
-      }
-    },
-    {
-      "id": "cookie-jar",
-      "name": "Cookie Jar",
-      "marker": "I",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        303,
-        211,
-        209,
-        316
-      ],
-      "artBounds": [
-        353,
-        257,
-        132,
-        109
-      ],
-      "sourceText": "Counts as 2 cards when active.",
-      "cardImage": "cards/cookie-jar.png",
-      "artwork": "illustrations/cookie-jar.png",
-      "text": "Counts as 2 cards when active.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 149,
-        "height": 122
-      }
-    },
-    {
-      "id": "flowers",
-      "name": "Flowers",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        291,
-        513,
-        222,
-        318
-      ],
-      "artBounds": [
-        326,
-        538,
-        174,
-        106
-      ],
-      "sourceText": "Take a card from the draw pile & the discard pile.",
-      "cardImage": "cards/flowers.png",
-      "artwork": "illustrations/flowers.png",
-      "text": "Take a card from the draw pile & the discard pile.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 195,
-        "height": 120
-      }
-    },
-    {
-      "id": "nope",
-      "name": "Nope",
-      "marker": "I",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        525,
-        147,
-        185,
-        305
-      ],
-      "artBounds": [
-        534,
-        149,
-        168,
-        138
-      ],
-      "sourceText": "Block an action.",
-      "cardImage": "cards/nope.png",
-      "artwork": "illustrations/nope.png",
-      "text": "Block an action.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artPolygon": [
-        [
-          568,
-          149
-        ],
-        [
-          702,
-          149
-        ],
-        [
-          702,
-          287
-        ],
-        [
-          534,
-          287
-        ],
-        [
-          534,
-          176
-        ],
-        [
-          568,
-          176
-        ]
-      ],
-      "artworkSize": {
-        "width": 188,
-        "height": 155
-      }
-    },
-    {
-      "id": "give-and-take",
-      "name": "Give and Take",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        532,
-        495,
-        197,
-        314
-      ],
-      "artBounds": [
-        560,
-        538,
-        141,
-        103
-      ],
-      "sourceText": "Swap hands with someone.",
-      "cardImage": "cards/give-and-take.png",
-      "artwork": "illustrations/give-and-take.png",
-      "text": "Swap hands with someone.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 158,
-        "height": 116
-      }
-    },
-    {
-      "id": "take-them-down-with-you",
-      "name": "Take Them Down With You",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        515,
-        828,
-        212,
-        326
-      ],
-      "artBounds": [
-        539,
-        893,
-        173,
-        82
-      ],
-      "sourceText": "Force someone to go down to 2 cards. You go down to 3 cards.",
-      "cardImage": "cards/take-them-down-with-you.png",
-      "artwork": "illustrations/take-them-down-with-you.png",
-      "text": "Force someone to go down to 2 cards. You go down to 3 cards.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 194,
-        "height": 92
-      }
-    },
-    {
-      "id": "fair-and-square",
-      "name": "Fair & Square",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        741,
         160,
-        187,
-        309
+        55,
+        325,
+        477
       ],
       "artBounds": [
-        753,
-        194,
-        127,
-        99
+        195,
+        111,
+        253,
+        146
       ],
-      "sourceText": "Steal a card from all opponents. Shuffle this card into the draw pile.",
-      "cardImage": "cards/fair-and-square.png",
-      "artwork": "illustrations/fair-and-square.png",
-      "text": "Steal a card from all opponents. Shuffle this card into the draw pile.",
+      "sourceText": "Draw 4 cards. You cannot win this turn.",
+      "text": "Draw 4 cards. You cannot win this turn.",
       "notes": [],
       "reviewStatus": "transcribed",
+      "cardImage": "cards/almost.png",
+      "artwork": "illustrations/almost.png",
+      "artPolygon": [
+        [
+          195,
+          140
+        ],
+        [
+          395,
+          140
+        ],
+        [
+          395,
+          111
+        ],
+        [
+          448,
+          111
+        ],
+        [
+          448,
+          257
+        ],
+        [
+          195,
+          257
+        ]
+      ],
       "artworkSize": {
-        "width": 143,
-        "height": 111
-      }
-    },
-    {
-      "id": "money",
-      "name": "Money",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        766,
-        502,
-        189,
-        312
-      ],
-      "artBounds": [
-        787,
-        541,
-        137,
-        106
-      ],
-      "sourceText": "Draw cards up to a number people can agree on. Put this card back in your hand.",
-      "cardImage": "cards/money.png",
-      "artwork": "illustrations/money.png",
-      "text": "Draw cards up to a number people can agree on. Put this card back in your hand.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 153,
-        "height": 119
-      }
-    },
-    {
-      "id": "snake-oil",
-      "name": "Snake Oil",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        746,
-        845,
-        225,
-        335
-      ],
-      "artBounds": [
-        797,
-        884,
-        142,
-        105
-      ],
-      "sourceText": "If you successfully give this card to someone, they discard 3/4 of their hand and this card.",
-      "cardImage": "cards/snake-oil.png",
-      "artwork": "illustrations/snake-oil.png",
-      "text": "If you successfully give this card to someone, they discard 3/4 of their hand and this card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 159,
-        "height": 118
-      }
-    },
-    {
-      "id": "crown",
-      "name": "Crown",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        958,
-        198,
-        198,
-        314
-      ],
-      "artBounds": [
-        979,
-        239,
-        159,
-        96
-      ],
-      "sourceText": "Discard 2 cards in someone’s hand. You discard 1 card.",
-      "cardImage": "cards/crown.png",
-      "artwork": "illustrations/crown.png",
-      "text": "Discard 2 cards in someone’s hand. You discard 1 card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 179,
-        "height": 107
+        "width": 399,
+        "height": 231
       }
     },
     {
       "id": "vice-versa",
       "name": "Vice Versa",
       "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
       "cardBounds": [
-        964,
-        538,
-        193,
-        312
+        490,
+        76,
+        302,
+        458
       ],
       "artBounds": [
-        985,
-        585,
-        150,
-        93
+        508,
+        141,
+        259,
+        132
       ],
       "sourceText": "Force someone to discard a card. You draw a card.",
-      "cardImage": "cards/vice-versa.png",
-      "artwork": "illustrations/vice-versa.png",
       "text": "Force someone to discard a card. You draw a card.",
       "notes": [],
       "reviewStatus": "transcribed",
+      "cardImage": "cards/vice-versa.png",
+      "artwork": "illustrations/vice-versa.png",
       "artworkSize": {
-        "width": 168,
-        "height": 105
+        "width": 409,
+        "height": 208
       }
     },
     {
-      "id": "private-investigation",
-      "name": "Private Investigation",
-      "marker": "S",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        967,
-        861,
-        201,
-        320
-      ],
-      "artBounds": [
-        983,
-        902,
-        164,
-        108
-      ],
-      "sourceText": "Spy on someone’s hand.",
-      "cardImage": "cards/private-investigation.png",
-      "artwork": "illustrations/private-investigation.png",
-      "text": "Spy on someone’s hand.",
-      "notes": [
-        "Title spelling normalized to “Private Investigation.”"
-      ],
-      "reviewStatus": "check-source",
-      "artworkSize": {
-        "width": 184,
-        "height": 122
-      }
-    },
-    {
-      "id": "rumors",
-      "name": "Rumors",
+      "id": "money-shuffling",
+      "name": "Money Shuffling",
       "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
       "cardBounds": [
-        1202,
-        172,
-        190,
-        308
+        833,
+        55,
+        307,
+        451
       ],
       "artBounds": [
-        1219,
-        209,
-        156,
-        100
+        843,
+        107,
+        282,
+        145
       ],
-      "sourceText": "Force someone to discard all friend cards in their hand.",
-      "cardImage": "cards/rumors.png",
-      "artwork": "illustrations/rumors.png",
-      "text": "Force someone to discard all friend cards in their hand.",
+      "sourceText": "Discard all of your coins. For each coin discarded, draw a card or make someone discard a card.",
+      "text": "Discard all of your coins. For each coin discarded, draw a card or make someone discard a card.",
       "notes": [],
       "reviewStatus": "transcribed",
+      "cardImage": "cards/money-shuffling.png",
+      "artwork": "illustrations/money-shuffling.png",
       "artworkSize": {
-        "width": 175,
-        "height": 112
+        "width": 445,
+        "height": 229
       }
     },
     {
-      "id": "hand-it-over",
-      "name": "Hand It Over",
+      "id": "confuse",
+      "name": "Confuse",
       "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
       "cardBounds": [
-        1192,
-        511,
-        193,
-        315
-      ],
-      "artBounds": [
-        1225,
-        543,
-        147,
-        138
-      ],
-      "sourceText": "Draw 3 cards.",
-      "cardImage": "cards/hand-it-over.png",
-      "artwork": "illustrations/hand-it-over.png",
-      "text": "Draw 3 cards.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 165,
-        "height": 155
-      }
-    },
-    {
-      "id": "almost",
-      "name": "Almost",
-      "marker": "I",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        1202,
-        839,
-        196,
-        318
-      ],
-      "artBounds": [
-        1216,
-        886,
-        172,
-        99
-      ],
-      "sourceText": "Draw 4 cards. You cannot win this turn.",
-      "cardImage": "cards/almost.png",
-      "artwork": "illustrations/almost.png",
-      "text": "Draw 4 cards. You cannot win this turn.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 193,
-        "height": 112
-      }
-    },
-    {
-      "id": "ignore",
-      "name": "Ignore",
-      "marker": "I",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        1416,
-        149,
-        200,
-        319
-      ],
-      "artBounds": [
-        1430,
-        203,
         173,
-        95
-      ],
-      "sourceText": "Draw up to cards discarded from another card.",
-      "cardImage": "cards/ignore.png",
-      "artwork": "illustrations/ignore.png",
-      "text": "Draw up to cards discarded from another card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 194,
-        "height": 107
-      }
-    },
-    {
-      "id": "split",
-      "name": "Split",
-      "marker": "S",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        1424,
-        468,
-        202,
-        316
+        574,
+        338,
+        537
       ],
       "artBounds": [
-        1440,
-        526,
-        167,
-        88
+        187,
+        642,
+        298,
+        175
       ],
-      "sourceText": "Steal a card from both the draw & discard pile.",
-      "cardImage": "cards/split.png",
-      "artwork": "illustrations/split.png",
-      "text": "Steal a card from both the draw & discard pile.",
+      "sourceText": "Force someone to discard a friend or item.",
+      "text": "Force someone to discard a friend or item.",
       "notes": [],
       "reviewStatus": "transcribed",
+      "cardImage": "cards/confuse.png",
+      "artwork": "illustrations/confuse.png",
       "artworkSize": {
-        "width": 187,
-        "height": 99
-      }
-    },
-    {
-      "id": "italy",
-      "name": "Italy",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        1422,
-        788,
-        203,
-        318
-      ],
-      "artBounds": [
-        1435,
-        816,
-        170,
-        112
-      ],
-      "sourceText": "Look at the top 3 cards in the draw pile. Put one in your hand.",
-      "cardImage": "cards/italy.png",
-      "artwork": "illustrations/italy.png",
-      "text": "Look at the top 3 cards in the draw pile. Put one in your hand.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 191,
-        "height": 126
-      }
-    },
-    {
-      "id": "kindness-of-my-heart",
-      "name": "Kindness of My Heart",
-      "marker": null,
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        1603,
-        142,
-        207,
-        320
-      ],
-      "artBounds": [
-        1627,
-        178,
-        165,
-        115
-      ],
-      "sourceText": "Steal 3 cards. Next turn, give one back.",
-      "cardImage": "cards/kindness-of-my-heart.png",
-      "artwork": "illustrations/kindness-of-my-heart.png",
-      "text": "Steal 3 cards. Next turn, give one back.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artPolygon": [
-        [
-          1695,
-          178
-        ],
-        [
-          1792,
-          178
-        ],
-        [
-          1792,
-          293
-        ],
-        [
-          1627,
-          293
-        ],
-        [
-          1627,
-          222
-        ],
-        [
-          1695,
-          222
-        ]
-      ],
-      "artworkSize": {
-        "width": 185,
-        "height": 129
-      }
-    },
-    {
-      "id": "too-rich",
-      "name": "Too Rich",
-      "marker": "F",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
-      "cardBounds": [
-        1628,
-        474,
-        196,
-        314
-      ],
-      "artBounds": [
-        1643,
-        510,
-        171,
-        101
-      ],
-      "sourceText": "Draw up to 4 cards when this is played. You must discard a card when you draw a card.",
-      "cardImage": "cards/too-rich.png",
-      "artwork": "illustrations/too-rich.png",
-      "text": "Draw up to 4 cards when this is played. You must discard a card when you draw a card.",
-      "notes": [],
-      "reviewStatus": "transcribed",
-      "artworkSize": {
-        "width": 192,
-        "height": 113
+        "width": 471,
+        "height": 276
       }
     },
     {
       "id": "heist",
       "name": "Heist",
       "marker": "S",
-      "source": "source/352EC0C9-F426-41C6-AF94-61D6242F6F03.jpg",
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
       "cardBounds": [
-        1636,
-        797,
-        188,
-        317
+        509,
+        555,
+        334,
+        525
       ],
       "artBounds": [
-        1650,
-        839,
-        174,
-        104
+        518,
+        576,
+        300,
+        198
       ],
-      "sourceText": "Take as many cards from anywhere as you can.",
+      "sourceText": "Take as many cards from anywhere as you can get away with.",
+      "text": "Take as many cards from anywhere as you can get away with.",
+      "notes": [],
+      "reviewStatus": "transcribed",
       "cardImage": "cards/heist.png",
       "artwork": "illustrations/heist.png",
-      "text": "Take as many cards from anywhere as you can.",
+      "artPolygon": [
+        [
+          615,
+          576
+        ],
+        [
+          750,
+          576
+        ],
+        [
+          818,
+          635
+        ],
+        [
+          818,
+          774
+        ],
+        [
+          518,
+          774
+        ],
+        [
+          518,
+          638
+        ]
+      ],
+      "artworkSize": {
+        "width": 474,
+        "height": 313
+      }
+    },
+    {
+      "id": "incognito",
+      "name": "Incognito",
+      "marker": "S",
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
+      "cardBounds": [
+        878,
+        551,
+        330,
+        526
+      ],
+      "artBounds": [
+        890,
+        578,
+        302,
+        201
+      ],
+      "sourceText": "Secretly look at someone else's hand.",
+      "text": "Secretly look at someone else's hand.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/incognito.png",
+      "artwork": "illustrations/incognito.png",
+      "artPolygon": [
+        [
+          1013,
+          578
+        ],
+        [
+          1067,
+          578
+        ],
+        [
+          1067,
+          600
+        ],
+        [
+          1192,
+          600
+        ],
+        [
+          1192,
+          779
+        ],
+        [
+          890,
+          779
+        ],
+        [
+          890,
+          600
+        ],
+        [
+          1013,
+          600
+        ]
+      ],
+      "artworkSize": {
+        "width": 477,
+        "height": 317
+      }
+    },
+    {
+      "id": "fraud-fred",
+      "name": "Fraud Fred",
+      "marker": null,
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
+      "cardBounds": [
+        177,
+        1128,
+        342,
+        591
+      ],
+      "artBounds": [
+        232,
+        1184,
+        234,
+        205
+      ],
+      "sourceText": "Rearrange the top 5 cards of the draw pile in any order.",
+      "text": "Rearrange the top 5 cards of the draw pile in any order.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/fraud-fred.png",
+      "artwork": "illustrations/fraud-fred.png",
+      "artworkSize": {
+        "width": 370,
+        "height": 324
+      }
+    },
+    {
+      "id": "three-faced",
+      "name": "Three Faced",
+      "marker": null,
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
+      "cardBounds": [
+        540,
+        1128,
+        347,
+        594
+      ],
+      "artBounds": [
+        549,
+        1175,
+        325,
+        180
+      ],
+      "sourceText": "Split the draw pile into 2 piles. Everyone gets to choose which pile to draw from when drawing.",
+      "text": "Split the draw pile into 2 piles. Everyone gets to choose which pile to draw from when drawing.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/three-faced.png",
+      "artwork": "illustrations/three-faced.png",
+      "artworkSize": {
+        "width": 513,
+        "height": 284
+      }
+    },
+    {
+      "id": "balanced-diet",
+      "name": "Balanced Diet",
+      "marker": "F",
+      "source": "source/4A45F9F2-0EF6-4FB6-9311-9314B6105D4F.jpg",
+      "cardBounds": [
+        905,
+        1130,
+        356,
+        611
+      ],
+      "artBounds": [
+        930,
+        1170,
+        322,
+        208
+      ],
+      "sourceText": "Discard your hand & shuffle the discard pile when played. You draw out of the discard pile.",
+      "text": "Discard your hand & shuffle the discard pile when played. You draw out of the discard pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/balanced-diet.png",
+      "artwork": "illustrations/balanced-diet.png",
+      "artPolygon": [
+        [
+          1035,
+          1170
+        ],
+        [
+          1064,
+          1170
+        ],
+        [
+          1064,
+          1205
+        ],
+        [
+          1252,
+          1205
+        ],
+        [
+          1252,
+          1378
+        ],
+        [
+          930,
+          1378
+        ],
+        [
+          930,
+          1205
+        ],
+        [
+          1035,
+          1205
+        ]
+      ],
+      "artworkSize": {
+        "width": 509,
+        "height": 329
+      }
+    },
+    {
+      "id": "rumors",
+      "name": "Rumors",
+      "marker": null,
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        87,
+        182,
+        311,
+        464
+      ],
+      "artBounds": [
+        107,
+        222,
+        273,
+        164
+      ],
+      "sourceText": "Force someone to discard all friend cards in their hand.",
+      "text": "Force someone to discard all friend cards in their hand.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/rumors.png",
+      "artwork": "illustrations/rumors.png",
+      "artPolygon": [
+        [
+          251,
+          222
+        ],
+        [
+          380,
+          222
+        ],
+        [
+          380,
+          386
+        ],
+        [
+          107,
+          386
+        ],
+        [
+          107,
+          245
+        ],
+        [
+          251,
+          245
+        ]
+      ],
+      "artworkSize": {
+        "width": 431,
+        "height": 258
+      }
+    },
+    {
+      "id": "roast-fleast",
+      "name": "Roast Fleast",
+      "marker": null,
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        402,
+        181,
+        294,
+        465
+      ],
+      "artBounds": [
+        435,
+        225,
+        229,
+        135
+      ],
+      "sourceText": "Everyone gives someone else a card. You can see all cards given.",
+      "text": "Everyone gives someone else a card. You can see all cards given.",
       "notes": [
-        "The right edge of the card and illustration is cut off in the original photograph."
+        "Title transcribed as \"Roast Fleast\" from the handwritten source."
       ],
       "reviewStatus": "check-source",
+      "cardImage": "cards/roast-fleast.png",
+      "artwork": "illustrations/roast-fleast.png",
       "artworkSize": {
-        "width": 195,
-        "height": 116
+        "width": 361,
+        "height": 213
+      }
+    },
+    {
+      "id": "double-eyed-cyclops",
+      "name": "Double Eyed Cyclops",
+      "marker": null,
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        703,
+        171,
+        295,
+        470
+      ],
+      "artBounds": [
+        711,
+        216,
+        279,
+        156
+      ],
+      "sourceText": "Flip the ways the draw & discard pile are facing. Put this card into the draw pile.",
+      "text": "Flip the ways the draw & discard pile are facing. Put this card into the draw pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/double-eyed-cyclops.png",
+      "artwork": "illustrations/double-eyed-cyclops.png",
+      "artworkSize": {
+        "width": 440,
+        "height": 246
+      }
+    },
+    {
+      "id": "bodyguard",
+      "name": "Bodyguard",
+      "marker": "F",
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        997,
+        168,
+        316,
+        474
+      ],
+      "artBounds": [
+        1053,
+        243,
+        162,
+        150
+      ],
+      "sourceText": "If someone makes you discard a card, instead discard this friend and draw a card.",
+      "text": "If someone makes you discard a card, instead discard this friend and draw a card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/bodyguard.png",
+      "artwork": "illustrations/bodyguard.png",
+      "artworkSize": {
+        "width": 255,
+        "height": 237
+      }
+    },
+    {
+      "id": "mighty-o",
+      "name": "Mighty O",
+      "marker": "I",
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        54,
+        653,
+        331,
+        504
+      ],
+      "artBounds": [
+        99,
+        668,
+        266,
+        211
+      ],
+      "sourceText": "Take a card of your choice from the draw or discard pile.",
+      "text": "Take a card of your choice from the draw or discard pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/mighty-o.png",
+      "artwork": "illustrations/mighty-o.png",
+      "artPolygon": [
+        [
+          296,
+          668
+        ],
+        [
+          336,
+          668
+        ],
+        [
+          336,
+          713
+        ],
+        [
+          365,
+          725
+        ],
+        [
+          365,
+          879
+        ],
+        [
+          99,
+          879
+        ],
+        [
+          99,
+          715
+        ],
+        [
+          280,
+          715
+        ]
+      ],
+      "artworkSize": {
+        "width": 420,
+        "height": 333
+      }
+    },
+    {
+      "id": "vegas",
+      "name": "Vegas",
+      "marker": null,
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        381,
+        655,
+        310,
+        497
+      ],
+      "artBounds": [
+        398,
+        724,
+        272,
+        151
+      ],
+      "sourceText": "If you have over 4 cards in your hand, put your hand shuffled into the draw pile. Draw 5 cards.",
+      "text": "If you have over 4 cards in your hand, put your hand shuffled into the draw pile. Draw 5 cards.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/vegas.png",
+      "artwork": "illustrations/vegas.png",
+      "artworkSize": {
+        "width": 430,
+        "height": 239
+      }
+    },
+    {
+      "id": "introduction",
+      "name": "Introduction",
+      "marker": null,
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        698,
+        665,
+        304,
+        498
+      ],
+      "artBounds": [
+        744,
+        745,
+        195,
+        128
+      ],
+      "sourceText": "Give any number of your active friends to someone else.",
+      "text": "Give any number of your active friends to someone else.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/introduction.png",
+      "artwork": "illustrations/introduction.png",
+      "artworkSize": {
+        "width": 308,
+        "height": 202
+      }
+    },
+    {
+      "id": "seal-the-deal",
+      "name": "Seal the Deal",
+      "marker": "F",
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        1010,
+        644,
+        320,
+        507
+      ],
+      "artBounds": [
+        1093,
+        700,
+        129,
+        179
+      ],
+      "sourceText": "On your turn, a trade between any players must be made.",
+      "text": "On your turn, a trade between any players must be made.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/seal-the-deal.png",
+      "artwork": "illustrations/seal-the-deal.png",
+      "artworkSize": {
+        "width": 203,
+        "height": 283
+      }
+    },
+    {
+      "id": "investment",
+      "name": "Investment",
+      "marker": "F",
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        33,
+        1171,
+        328,
+        531
+      ],
+      "artBounds": [
+        73,
+        1227,
+        280,
+        185
+      ],
+      "sourceText": "When you draw a coin, draw an additional card with the extra card drawn.",
+      "text": "When you draw a coin, draw an additional card with the extra card drawn.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/investment.png",
+      "artwork": "illustrations/investment.png",
+      "artworkSize": {
+        "width": 442,
+        "height": 292
+      }
+    },
+    {
+      "id": "cookie-jar",
+      "name": "Cookie Jar",
+      "marker": "I",
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        371,
+        1156,
+        314,
+        531
+      ],
+      "artBounds": [
+        432,
+        1217,
+        186,
+        190
+      ],
+      "sourceText": "Counts as 2 cards when active.",
+      "text": "Counts as 2 cards when active.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/cookie-jar.png",
+      "artwork": "illustrations/cookie-jar.png",
+      "artworkSize": {
+        "width": 294,
+        "height": 300
+      }
+    },
+    {
+      "id": "sharing-is-caring",
+      "name": "Sharing is Caring",
+      "marker": null,
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        686,
+        1164,
+        323,
+        536
+      ],
+      "artBounds": [
+        709,
+        1221,
+        291,
+        193
+      ],
+      "sourceText": "Steal all coins.",
+      "text": "Steal all coins.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/sharing-is-caring.png",
+      "artwork": "illustrations/sharing-is-caring.png",
+      "artworkSize": {
+        "width": 460,
+        "height": 305
+      }
+    },
+    {
+      "id": "people-s-choice-dictator",
+      "name": "People's Choice Dictator",
+      "marker": "F",
+      "source": "source/4B9265A2-9E6F-4A59-87B7-130642C8D41B.jpg",
+      "cardBounds": [
+        1027,
+        1164,
+        316,
+        539
+      ],
+      "artBounds": [
+        1053,
+        1240,
+        275,
+        160
+      ],
+      "sourceText": "All trades made must be approved by you.",
+      "text": "All trades made must be approved by you.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/people-s-choice-dictator.png",
+      "artwork": "illustrations/people-s-choice-dictator.png",
+      "artworkSize": {
+        "width": 434,
+        "height": 253
+      }
+    },
+    {
+      "id": "recycle-diver",
+      "name": "Recycle Diver",
+      "marker": "S",
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        61,
+        99,
+        309,
+        429
+      ],
+      "artBounds": [
+        131,
+        150,
+        195,
+        144
+      ],
+      "sourceText": "Steal 2 cards from the discard pile.",
+      "text": "Steal 2 cards from the discard pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/recycle-diver.png",
+      "artwork": "illustrations/recycle-diver.png",
+      "artworkSize": {
+        "width": 308,
+        "height": 227
+      }
+    },
+    {
+      "id": "jump-the-gun",
+      "name": "Jump the Gun",
+      "marker": "S",
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        377,
+        96,
+        286,
+        425
+      ],
+      "artBounds": [
+        402,
+        145,
+        227,
+        121
+      ],
+      "sourceText": "Steal 2 cards from the draw pile.",
+      "text": "Steal 2 cards from the draw pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/jump-the-gun.png",
+      "artwork": "illustrations/jump-the-gun.png",
+      "artworkSize": {
+        "width": 358,
+        "height": 191
+      }
+    },
+    {
+      "id": "the-sun",
+      "name": "The Sun",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        687,
+        106,
+        280,
+        423
+      ],
+      "artBounds": [
+        730,
+        137,
+        170,
+        143
+      ],
+      "sourceText": "If you are forced to discard this card, draw up to the cards that were discarded this way.",
+      "text": "If you are forced to discard this card, draw up to the cards that were discarded this way.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/the-sun.png",
+      "artwork": "illustrations/the-sun.png",
+      "artworkSize": {
+        "width": 268,
+        "height": 226
+      }
+    },
+    {
+      "id": "proofread",
+      "name": "Proofread",
+      "marker": "I",
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        973,
+        107,
+        287,
+        423
+      ],
+      "artBounds": [
+        982,
+        161,
+        251,
+        144
+      ],
+      "sourceText": "If someone is wanting to make a trade with you, look at the card(s) they are offering. 2 uses.",
+      "text": "If someone is wanting to make a trade with you, look at the card(s) they are offering. 2 uses.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/proofread.png",
+      "artwork": "illustrations/proofread.png",
+      "artworkSize": {
+        "width": 396,
+        "height": 228
+      }
+    },
+    {
+      "id": "crying-always-works",
+      "name": "Crying Always Works",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        37,
+        531,
+        313,
+        474
+      ],
+      "artBounds": [
+        60,
+        578,
+        284,
+        167
+      ],
+      "sourceText": "Make all other friends your friends.",
+      "text": "Make all other friends your friends.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/crying-always-works.png",
+      "artwork": "illustrations/crying-always-works.png",
+      "artPolygon": [
+        [
+          208,
+          578
+        ],
+        [
+          344,
+          578
+        ],
+        [
+          344,
+          745
+        ],
+        [
+          60,
+          745
+        ],
+        [
+          60,
+          620
+        ],
+        [
+          180,
+          620
+        ]
+      ],
+      "artworkSize": {
+        "width": 448,
+        "height": 263
+      }
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        367,
+        529,
+        310,
+        481
+      ],
+      "artBounds": [
+        380,
+        544,
+        277,
+        189
+      ],
+      "sourceText": "Take a card from the draw & discard pile.",
+      "text": "Take a card from the draw & discard pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/flowers.png",
+      "artwork": "illustrations/flowers.png",
+      "artPolygon": [
+        [
+          486,
+          544
+        ],
+        [
+          657,
+          544
+        ],
+        [
+          657,
+          733
+        ],
+        [
+          380,
+          733
+        ],
+        [
+          380,
+          591
+        ],
+        [
+          486,
+          591
+        ]
+      ],
+      "artworkSize": {
+        "width": 437,
+        "height": 298
+      }
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        678,
+        542,
+        297,
+        468
+      ],
+      "artBounds": [
+        738,
+        553,
+        153,
+        182
+      ],
+      "sourceText": "Draw a card. If you draw a Friend, Item, Coin, or Secret, draw 3 more cards.",
+      "text": "Draw a card. If you draw a Friend, Item, Coin, or Secret, draw 3 more cards.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/sleep.png",
+      "artwork": "illustrations/sleep.png",
+      "artworkSize": {
+        "width": 242,
+        "height": 288
+      }
+    },
+    {
+      "id": "pain-brain",
+      "name": "Pain Brain",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        984,
+        532,
+        309,
+        468
+      ],
+      "artBounds": [
+        998,
+        573,
+        263,
+        167
+      ],
+      "sourceText": "Discard 2 cards. Draw 4 cards.",
+      "text": "Discard 2 cards. Draw 4 cards.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/pain-brain.png",
+      "artwork": "illustrations/pain-brain.png",
+      "artworkSize": {
+        "width": 415,
+        "height": 263
+      }
+    },
+    {
+      "id": "suggestions",
+      "name": "Suggestions",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        5,
+        1014,
+        340,
+        525
+      ],
+      "artBounds": [
+        36,
+        1080,
+        284,
+        181
+      ],
+      "sourceText": "Force someone to do any possible action once.",
+      "text": "Force someone to do any possible action once.",
+      "notes": [
+        "The crossed-out title \"Threats\" is omitted."
+      ],
+      "reviewStatus": "check-source",
+      "cardImage": "cards/suggestions.png",
+      "artwork": "illustrations/suggestions.png",
+      "artworkSize": {
+        "width": 448,
+        "height": 286
+      }
+    },
+    {
+      "id": "the-moon",
+      "name": "The Moon",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        362,
+        1027,
+        321,
+        529
+      ],
+      "artBounds": [
+        412,
+        1066,
+        241,
+        160
+      ],
+      "sourceText": "If this card is stolen the thief must give you a card.",
+      "text": "If this card is stolen the thief must give you a card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/the-moon.png",
+      "artwork": "illustrations/the-moon.png",
+      "artworkSize": {
+        "width": 380,
+        "height": 253
+      }
+    },
+    {
+      "id": "disarm",
+      "name": "Disarm",
+      "marker": "F",
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        696,
+        1026,
+        309,
+        523
+      ],
+      "artBounds": [
+        713,
+        1118,
+        210,
+        146
+      ],
+      "sourceText": "Play without your thumbs or give your hand away. Discard this card if you fail.",
+      "text": "Play without your thumbs or give your hand away. Discard this card if you fail.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/disarm.png",
+      "artwork": "illustrations/disarm.png",
+      "artworkSize": {
+        "width": 331,
+        "height": 231
+      }
+    },
+    {
+      "id": "royal-reset",
+      "name": "Royal Reset",
+      "marker": null,
+      "source": "source/67FB5D7A-11BD-4C6F-A28C-621E66E1E4EA.jpg",
+      "cardBounds": [
+        1007,
+        1021,
+        323,
+        520
+      ],
+      "artBounds": [
+        1015,
+        1084,
+        283,
+        149
+      ],
+      "sourceText": "Shuffle the draw & discard piles together. Draw 1 card.",
+      "text": "Shuffle the draw & discard piles together. Draw 1 card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/royal-reset.png",
+      "artwork": "illustrations/royal-reset.png",
+      "artworkSize": {
+        "width": 446,
+        "height": 235
+      }
+    },
+    {
+      "id": "debris",
+      "name": "Debris (Deh-briss)",
+      "marker": null,
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        66,
+        131,
+        299,
+        465
+      ],
+      "artBounds": [
+        84,
+        185,
+        277,
+        137
+      ],
+      "sourceText": "Draw 1 card. Return this card to your hand.",
+      "text": "Draw 1 card. Return this card to your hand.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/debris.png",
+      "artwork": "illustrations/debris.png",
+      "artworkSize": {
+        "width": 437,
+        "height": 216
+      }
+    },
+    {
+      "id": "auction",
+      "name": "Auction",
+      "marker": "I",
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        381,
+        117,
+        298,
+        464
+      ],
+      "artBounds": [
+        388,
+        184,
+        268,
+        111
+      ],
+      "sourceText": "Force someone to give away their cards for a payment they will accept in game.",
+      "text": "Force someone to give away their cards for a payment they will accept in game.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/auction.png",
+      "artwork": "illustrations/auction.png",
+      "artworkSize": {
+        "width": 423,
+        "height": 175
+      }
+    },
+    {
+      "id": "coin",
+      "name": "Coin",
+      "marker": "¢",
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        701,
+        122,
+        300,
+        458
+      ],
+      "artBounds": [
+        754,
+        160,
+        176,
+        146
+      ],
+      "sourceText": "When drawn, place this in front of you face up and draw another card. This can be traded with anyone.",
+      "text": "When drawn, place this in front of you face up and draw another card. This can be traded with anyone.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/coin.png",
+      "artwork": "illustrations/coin.png",
+      "artworkSize": {
+        "width": 277,
+        "height": 230
+      }
+    },
+    {
+      "id": "money",
+      "name": "Money",
+      "marker": null,
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        1003,
+        109,
+        321,
+        459
+      ],
+      "artBounds": [
+        1041,
+        154,
+        191,
+        159
+      ],
+      "sourceText": "Draw cards up to a number people can agree on. Put this card back in your hand.",
+      "text": "Draw cards up to a number people can agree on. Put this card back in your hand.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/money.png",
+      "artwork": "illustrations/money.png",
+      "artworkSize": {
+        "width": 301,
+        "height": 251
+      }
+    },
+    {
+      "id": "piggy-bank",
+      "name": "Piggy Bank",
+      "marker": null,
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        59,
+        599,
+        313,
+        509
+      ],
+      "artBounds": [
+        74,
+        637,
+        246,
+        187
+      ],
+      "sourceText": "Spend 1 coin to draw 1 card. Give this card to another player.",
+      "text": "Spend 1 coin to draw 1 card. Give this card to another player.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/piggy-bank.png",
+      "artwork": "illustrations/piggy-bank.png",
+      "artPolygon": [
+        [
+          111,
+          650
+        ],
+        [
+          210,
+          650
+        ],
+        [
+          210,
+          637
+        ],
+        [
+          245,
+          637
+        ],
+        [
+          245,
+          650
+        ],
+        [
+          320,
+          650
+        ],
+        [
+          320,
+          824
+        ],
+        [
+          74,
+          824
+        ],
+        [
+          74,
+          680
+        ],
+        [
+          111,
+          680
+        ]
+      ],
+      "artworkSize": {
+        "width": 388,
+        "height": 295
+      }
+    },
+    {
+      "id": "split",
+      "name": "Split",
+      "marker": "S",
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        382,
+        587,
+        313,
+        507
+      ],
+      "artBounds": [
+        387,
+        610,
+        292,
+        189
+      ],
+      "sourceText": "Steal a card from both the draw & discard pile.",
+      "text": "Steal a card from both the draw & discard pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/split.png",
+      "artwork": "illustrations/split.png",
+      "artPolygon": [
+        [
+          469,
+          610
+        ],
+        [
+          622,
+          610
+        ],
+        [
+          622,
+          640
+        ],
+        [
+          679,
+          640
+        ],
+        [
+          679,
+          799
+        ],
+        [
+          387,
+          799
+        ],
+        [
+          387,
+          645
+        ],
+        [
+          469,
+          645
+        ]
+      ],
+      "artworkSize": {
+        "width": 461,
+        "height": 299
+      }
+    },
+    {
+      "id": "too-rich",
+      "name": "Too Rich",
+      "marker": "F",
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        698,
+        582,
+        315,
+        506
+      ],
+      "artBounds": [
+        712,
+        606,
+        283,
+        202
+      ],
+      "sourceText": "Draw up to 4 cards when this is played. You must discard a card when you draw a card.",
+      "text": "Draw up to 4 cards when this is played. You must discard a card when you draw a card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/too-rich.png",
+      "artwork": "illustrations/too-rich.png",
+      "artPolygon": [
+        [
+          765,
+          620
+        ],
+        [
+          765,
+          606
+        ],
+        [
+          795,
+          606
+        ],
+        [
+          795,
+          632
+        ],
+        [
+          910,
+          632
+        ],
+        [
+          995,
+          650
+        ],
+        [
+          995,
+          808
+        ],
+        [
+          712,
+          808
+        ],
+        [
+          712,
+          650
+        ]
+      ],
+      "artworkSize": {
+        "width": 447,
+        "height": 319
+      }
+    },
+    {
+      "id": "snake-oil",
+      "name": "Snake Oil",
+      "marker": null,
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        1022,
+        581,
+        328,
+        511
+      ],
+      "artBounds": [
+        1083,
+        637,
+        152,
+        144
+      ],
+      "sourceText": "If you successfully give this card to someone, they discard 3/4 of their hand and this card.",
+      "text": "If you successfully give this card to someone, they discard 3/4 of their hand and this card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/snake-oil.png",
+      "artwork": "illustrations/snake-oil.png",
+      "artworkSize": {
+        "width": 240,
+        "height": 227
+      }
+    },
+    {
+      "id": "positivity",
+      "name": "Positivity",
+      "marker": "F",
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        31,
+        1118,
+        323,
+        561
+      ],
+      "artBounds": [
+        48,
+        1190,
+        274,
+        177
+      ],
+      "sourceText": "Smile forever or discard a card.",
+      "text": "Smile forever or discard a card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/positivity.png",
+      "artwork": "illustrations/positivity.png",
+      "artworkSize": {
+        "width": 432,
+        "height": 279
+      }
+    },
+    {
+      "id": "taxer-taxer",
+      "name": "Taxer Taxer",
+      "marker": "S",
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        356,
+        1103,
+        330,
+        557
+      ],
+      "artBounds": [
+        444,
+        1156,
+        233,
+        206
+      ],
+      "sourceText": "Steal 1 card from someone.",
+      "text": "Steal 1 card from someone.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/taxer-taxer.png",
+      "artwork": "illustrations/taxer-taxer.png",
+      "artPolygon": [
+        [
+          559,
+          1156
+        ],
+        [
+          639,
+          1156
+        ],
+        [
+          639,
+          1168
+        ],
+        [
+          677,
+          1168
+        ],
+        [
+          677,
+          1362
+        ],
+        [
+          444,
+          1362
+        ],
+        [
+          444,
+          1180
+        ],
+        [
+          559,
+          1180
+        ]
+      ],
+      "artworkSize": {
+        "width": 368,
+        "height": 326
+      }
+    },
+    {
+      "id": "refund",
+      "name": "Refund",
+      "marker": null,
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        690,
+        1088,
+        331,
+        567
+      ],
+      "artBounds": [
+        781,
+        1134,
+        112,
+        192
+      ],
+      "sourceText": "Look at someone's hand & take back all the cards they ever stole from you this game.",
+      "text": "Look at someone's hand & take back all the cards they ever stole from you this game.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/refund.png",
+      "artwork": "illustrations/refund.png",
+      "artworkSize": {
+        "width": 177,
+        "height": 303
+      }
+    },
+    {
+      "id": "fair-square",
+      "name": "Fair & Square",
+      "marker": null,
+      "source": "source/D20947D1-BFD5-4D45-8DB1-BCB035CBEBBF.jpg",
+      "cardBounds": [
+        1023,
+        1112,
+        344,
+        559
+      ],
+      "artBounds": [
+        1033,
+        1170,
+        232,
+        195
+      ],
+      "sourceText": "Steal a card from all opponents. Shuffle this card into the draw pile.",
+      "text": "Steal a card from all opponents. Shuffle this card into the draw pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/fair-square.png",
+      "artwork": "illustrations/fair-square.png",
+      "artworkSize": {
+        "width": 366,
+        "height": 308
+      }
+    },
+    {
+      "id": "ten-hens",
+      "name": "Ten Hens",
+      "marker": "F",
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        86,
+        175,
+        284,
+        446
+      ],
+      "artBounds": [
+        99,
+        220,
+        267,
+        155
+      ],
+      "sourceText": "Draw an additional card on your turn.",
+      "text": "Draw an additional card on your turn.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/ten-hens.png",
+      "artwork": "illustrations/ten-hens.png",
+      "artPolygon": [
+        [
+          283,
+          220
+        ],
+        [
+          366,
+          220
+        ],
+        [
+          366,
+          375
+        ],
+        [
+          99,
+          375
+        ],
+        [
+          99,
+          237
+        ],
+        [
+          283,
+          237
+        ]
+      ],
+      "artworkSize": {
+        "width": 422,
+        "height": 245
+      }
+    },
+    {
+      "id": "fraud",
+      "name": "Fraud",
+      "marker": "I",
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        392,
+        158,
+        290,
+        449
+      ],
+      "artBounds": [
+        444,
+        218,
+        168,
+        131
+      ],
+      "sourceText": "Counts as 2 coins when active. Use to use the coins.",
+      "text": "Counts as 2 coins when active. Use to use the coins.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/fraud.png",
+      "artwork": "illustrations/fraud.png",
+      "artworkSize": {
+        "width": 265,
+        "height": 207
+      }
+    },
+    {
+      "id": "hand-it-over",
+      "name": "Hand It Over",
+      "marker": null,
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        687,
+        144,
+        300,
+        452
+      ],
+      "artBounds": [
+        714,
+        193,
+        231,
+        143
+      ],
+      "sourceText": "Draw 3 cards.",
+      "text": "Draw 3 cards.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/hand-it-over.png",
+      "artwork": "illustrations/hand-it-over.png",
+      "artworkSize": {
+        "width": 365,
+        "height": 226
+      }
+    },
+    {
+      "id": "kindness-of-my-heart",
+      "name": "Kindness of My Heart",
+      "marker": null,
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        991,
+        136,
+        307,
+        438
+      ],
+      "artBounds": [
+        1029,
+        187,
+        240,
+        146
+      ],
+      "sourceText": "Steal 3 cards. Next turn, give one back.",
+      "text": "Steal 3 cards. Next turn, give one back.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/kindness-of-my-heart.png",
+      "artwork": "illustrations/kindness-of-my-heart.png",
+      "artPolygon": [
+        [
+          1116,
+          187
+        ],
+        [
+          1240,
+          187
+        ],
+        [
+          1269,
+          214
+        ],
+        [
+          1269,
+          333
+        ],
+        [
+          1029,
+          333
+        ],
+        [
+          1029,
+          234
+        ],
+        [
+          1116,
+          234
+        ]
+      ],
+      "artworkSize": {
+        "width": 379,
+        "height": 231
+      }
+    },
+    {
+      "id": "magic-eye",
+      "name": "Magic Eye",
+      "marker": null,
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        58,
+        621,
+        306,
+        485
+      ],
+      "artBounds": [
+        81,
+        642,
+        267,
+        194
+      ],
+      "sourceText": "Look at a card on the top of the draw pile for each player. Rearrange those cards however you like.",
+      "text": "Look at a card on the top of the draw pile for each player. Rearrange those cards however you like.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/magic-eye.png",
+      "artwork": "illustrations/magic-eye.png",
+      "artPolygon": [
+        [
+          223,
+          642
+        ],
+        [
+          348,
+          642
+        ],
+        [
+          348,
+          836
+        ],
+        [
+          81,
+          836
+        ],
+        [
+          81,
+          671
+        ],
+        [
+          223,
+          671
+        ]
+      ],
+      "artworkSize": {
+        "width": 421,
+        "height": 306
+      }
+    },
+    {
+      "id": "lizard-pal",
+      "name": "Lizard Pal",
+      "marker": "I",
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        377,
+        618,
+        300,
+        483
+      ],
+      "artBounds": [
+        438,
+        681,
+        216,
+        154
+      ],
+      "sourceText": "Block a targetted card or steal 2 cards.",
+      "text": "Block a targeted card or steal 2 cards.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/lizard-pal.png",
+      "artwork": "illustrations/lizard-pal.png",
+      "artworkSize": {
+        "width": 341,
+        "height": 243
+      }
+    },
+    {
+      "id": "dictionary",
+      "name": "Dictionary",
+      "marker": "F",
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        690,
+        597,
+        311,
+        484
+      ],
+      "artBounds": [
+        735,
+        695,
+        256,
+        121
+      ],
+      "sourceText": "You must speak in a different language than the one you use the most.",
+      "text": "You must speak in a different language than the one you use the most.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/dictionary.png",
+      "artwork": "illustrations/dictionary.png",
+      "artworkSize": {
+        "width": 404,
+        "height": 191
+      }
+    },
+    {
+      "id": "round-down",
+      "name": "Round Down",
+      "marker": null,
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        1007,
+        611,
+        301,
+        483
+      ],
+      "artBounds": [
+        1021,
+        662,
+        253,
+        156
+      ],
+      "sourceText": "Make everyone (including you) discard 1/2 of their hand.",
+      "text": "Make everyone (including you) discard 1/2 of their hand.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/round-down.png",
+      "artwork": "illustrations/round-down.png",
+      "artworkSize": {
+        "width": 400,
+        "height": 247
+      }
+    },
+    {
+      "id": "fortunate",
+      "name": "Fortunate",
+      "marker": "S",
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        18,
+        1117,
+        324,
+        516
+      ],
+      "artBounds": [
+        72,
+        1170,
+        225,
+        176
+      ],
+      "sourceText": "Choose an opponent secretly. If they talk next, steal a card from them & discard this card.",
+      "text": "Choose an opponent secretly. If they talk next, steal a card from them & discard this card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/fortunate.png",
+      "artwork": "illustrations/fortunate.png",
+      "artworkSize": {
+        "width": 355,
+        "height": 278
+      }
+    },
+    {
+      "id": "stem-cell",
+      "name": "Stem Cell",
+      "marker": null,
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        343,
+        1118,
+        317,
+        522
+      ],
+      "artBounds": [
+        368,
+        1128,
+        288,
+        215
+      ],
+      "sourceText": "Look at an opponent's hand. Steal a card from them.",
+      "text": "Look at an opponent's hand. Steal a card from them.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/stem-cell.png",
+      "artwork": "illustrations/stem-cell.png",
+      "artPolygon": [
+        [
+          571,
+          1128
+        ],
+        [
+          656,
+          1128
+        ],
+        [
+          656,
+          1343
+        ],
+        [
+          368,
+          1343
+        ],
+        [
+          368,
+          1170
+        ],
+        [
+          571,
+          1170
+        ]
+      ],
+      "artworkSize": {
+        "width": 455,
+        "height": 340
+      }
+    },
+    {
+      "id": "nope",
+      "name": "Nope",
+      "marker": "I",
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        675,
+        1119,
+        314,
+        528
+      ],
+      "artBounds": [
+        709,
+        1124,
+        273,
+        229
+      ],
+      "sourceText": "Block an action. 2 uses.",
+      "text": "Block an action. 2 uses.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/nope.png",
+      "artwork": "illustrations/nope.png",
+      "artPolygon": [
+        [
+          798,
+          1124
+        ],
+        [
+          930,
+          1124
+        ],
+        [
+          930,
+          1180
+        ],
+        [
+          982,
+          1180
+        ],
+        [
+          982,
+          1353
+        ],
+        [
+          709,
+          1353
+        ],
+        [
+          709,
+          1156
+        ],
+        [
+          767,
+          1156
+        ],
+        [
+          767,
+          1134
+        ],
+        [
+          798,
+          1134
+        ]
+      ],
+      "artworkSize": {
+        "width": 432,
+        "height": 361
+      }
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "marker": null,
+      "source": "source/DFA3645A-B7BE-47E2-B39E-CC8DD263AA38.jpg",
+      "cardBounds": [
+        992,
+        1137,
+        324,
+        523
+      ],
+      "artBounds": [
+        1030,
+        1161,
+        188,
+        207
+      ],
+      "sourceText": "Look at the top 3 cards in the draw pile. Put one in your hand.",
+      "text": "Look at the top 3 cards in the draw pile. Put one in your hand.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/italy.png",
+      "artwork": "illustrations/italy.png",
+      "artPolygon": [
+        [
+          1105,
+          1161
+        ],
+        [
+          1164,
+          1161
+        ],
+        [
+          1164,
+          1192
+        ],
+        [
+          1218,
+          1192
+        ],
+        [
+          1218,
+          1368
+        ],
+        [
+          1030,
+          1368
+        ],
+        [
+          1030,
+          1192
+        ],
+        [
+          1105,
+          1192
+        ]
+      ],
+      "artworkSize": {
+        "width": 297,
+        "height": 327
+      }
+    },
+    {
+      "id": "fact-check",
+      "name": "Fact Check",
+      "marker": null,
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        92,
+        161,
+        291,
+        431
+      ],
+      "artBounds": [
+        202,
+        212,
+        149,
+        130
+      ],
+      "sourceText": "Make someone discard the leftmost/rightmost card in their hand.",
+      "text": "Make someone discard the leftmost/rightmost card in their hand.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/fact-check.png",
+      "artwork": "illustrations/fact-check.png",
+      "artworkSize": {
+        "width": 235,
+        "height": 205
+      }
+    },
+    {
+      "id": "my-mother",
+      "name": "My Mother",
+      "marker": "F",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        405,
+        159,
+        280,
+        433
+      ],
+      "artBounds": [
+        411,
+        200,
+        253,
+        147
+      ],
+      "sourceText": "All additional cards drawn by anyone on your turn must be revealed.",
+      "text": "All additional cards drawn by anyone on your turn must be revealed.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/my-mother.png",
+      "artwork": "illustrations/my-mother.png",
+      "artPolygon": [
+        [
+          482,
+          200
+        ],
+        [
+          664,
+          200
+        ],
+        [
+          664,
+          347
+        ],
+        [
+          411,
+          347
+        ],
+        [
+          411,
+          209
+        ],
+        [
+          482,
+          209
+        ]
+      ],
+      "artworkSize": {
+        "width": 399,
+        "height": 232
+      }
+    },
+    {
+      "id": "ignore",
+      "name": "Ignore",
+      "marker": "I",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        675,
+        159,
+        299,
+        426
+      ],
+      "artBounds": [
+        715,
+        193,
+        175,
+        158
+      ],
+      "sourceText": "Draw up to cards discarded from another card.",
+      "text": "Draw up to cards discarded from another card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/ignore.png",
+      "artwork": "illustrations/ignore.png",
+      "artworkSize": {
+        "width": 276,
+        "height": 249
+      }
+    },
+    {
+      "id": "take-them-down-with-you",
+      "name": "Take Them Down With You",
+      "marker": null,
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        937,
+        164,
+        332,
+        436
+      ],
+      "artBounds": [
+        966,
+        224,
+        240,
+        131
+      ],
+      "sourceText": "Force someone to go down to 2 cards. You go down to 3 cards.",
+      "text": "Force someone to go down to 2 cards. You go down to 3 cards.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/take-them-down-with-you.png",
+      "artwork": "illustrations/take-them-down-with-you.png",
+      "artPolygon": [
+        [
+          1120,
+          224
+        ],
+        [
+          1150,
+          224
+        ],
+        [
+          1150,
+          249
+        ],
+        [
+          1206,
+          249
+        ],
+        [
+          1206,
+          355
+        ],
+        [
+          966,
+          355
+        ],
+        [
+          966,
+          249
+        ],
+        [
+          1120,
+          249
+        ]
+      ],
+      "artworkSize": {
+        "width": 379,
+        "height": 207
+      }
+    },
+    {
+      "id": "guard-cat",
+      "name": "Guard Cat",
+      "marker": "F",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        84,
+        635,
+        307,
+        481
+      ],
+      "artBounds": [
+        110,
+        683,
+        270,
+        146
+      ],
+      "sourceText": "You cannot draw or discard any cards outside of your turn.",
+      "text": "You cannot draw or discard any cards outside of your turn.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/guard-cat.png",
+      "artwork": "illustrations/guard-cat.png",
+      "artworkSize": {
+        "width": 426,
+        "height": 231
+      }
+    },
+    {
+      "id": "emotional-maturity",
+      "name": "Emotional Maturity",
+      "marker": "F",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        394,
+        626,
+        299,
+        470
+      ],
+      "artBounds": [
+        447,
+        675,
+        183,
+        161
+      ],
+      "sourceText": "If someone tries to steal from you, discard a card and block the thievery.",
+      "text": "If someone tries to steal from you, discard a card and block the thievery.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/emotional-maturity.png",
+      "artwork": "illustrations/emotional-maturity.png",
+      "artworkSize": {
+        "width": 289,
+        "height": 254
+      }
+    },
+    {
+      "id": "crown",
+      "name": "Crown",
+      "marker": null,
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        694,
+        615,
+        294,
+        479
+      ],
+      "artBounds": [
+        752,
+        673,
+        177,
+        143
+      ],
+      "sourceText": "Discard 2 cards in someone's hand. You discard 1 card.",
+      "text": "Discard 2 cards in someone's hand. You discard 1 card.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/crown.png",
+      "artwork": "illustrations/crown.png",
+      "artworkSize": {
+        "width": 280,
+        "height": 225
+      }
+    },
+    {
+      "id": "give-and-take",
+      "name": "Give and Take",
+      "marker": null,
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        1014,
+        626,
+        294,
+        483
+      ],
+      "artBounds": [
+        1052,
+        683,
+        212,
+        157
+      ],
+      "sourceText": "Swap hands with someone.",
+      "text": "Swap hands with someone.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/give-and-take.png",
+      "artwork": "illustrations/give-and-take.png",
+      "artworkSize": {
+        "width": 335,
+        "height": 248
+      }
+    },
+    {
+      "id": "encouraging-words",
+      "name": "Encouraging Words",
+      "marker": "F",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        29,
+        1130,
+        327,
+        541
+      ],
+      "artBounds": [
+        52,
+        1140,
+        288,
+        228
+      ],
+      "sourceText": "This person cannot draw cards at the start of their turn for 2 turns.",
+      "text": "This person cannot draw cards at the start of their turn for 2 turns.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/encouraging-words.png",
+      "artwork": "illustrations/encouraging-words.png",
+      "artPolygon": [
+        [
+          250,
+          1140
+        ],
+        [
+          290,
+          1140
+        ],
+        [
+          290,
+          1184
+        ],
+        [
+          340,
+          1184
+        ],
+        [
+          340,
+          1368
+        ],
+        [
+          52,
+          1368
+        ],
+        [
+          52,
+          1184
+        ],
+        [
+          250,
+          1184
+        ]
+      ],
+      "artworkSize": {
+        "width": 455,
+        "height": 360
+      }
+    },
+    {
+      "id": "canned-souls",
+      "name": "Canned Souls",
+      "marker": "I",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        359,
+        1128,
+        321,
+        533
+      ],
+      "artBounds": [
+        436,
+        1178,
+        163,
+        187
+      ],
+      "sourceText": "Double your card draw for a turn.",
+      "text": "Double your card draw for a turn.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/canned-souls.png",
+      "artwork": "illustrations/canned-souls.png",
+      "artworkSize": {
+        "width": 258,
+        "height": 295
+      }
+    },
+    {
+      "id": "power-potions",
+      "name": "Power Potions",
+      "marker": "F",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        692,
+        1113,
+        344,
+        551
+      ],
+      "artBounds": [
+        713,
+        1150,
+        237,
+        198
+      ],
+      "sourceText": "Everyone discards a card when first played. Decrease the minimum winning hand size to 9 cards.",
+      "text": "Everyone discards a card when first played. Decrease the minimum winning hand size to 9 cards.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/power-potions.png",
+      "artwork": "illustrations/power-potions.png",
+      "artPolygon": [
+        [
+          876,
+          1150
+        ],
+        [
+          940,
+          1150
+        ],
+        [
+          940,
+          1174
+        ],
+        [
+          950,
+          1174
+        ],
+        [
+          950,
+          1348
+        ],
+        [
+          713,
+          1348
+        ],
+        [
+          713,
+          1174
+        ],
+        [
+          876,
+          1174
+        ]
+      ],
+      "artworkSize": {
+        "width": 374,
+        "height": 312
+      }
+    },
+    {
+      "id": "quiet-mimes",
+      "name": "Quiet Mimes",
+      "marker": "S",
+      "source": "source/F3662CBF-7319-4C87-A403-1EE8A9C1AEE5.jpg",
+      "cardBounds": [
+        1020,
+        1140,
+        337,
+        534
+      ],
+      "artBounds": [
+        1090,
+        1234,
+        202,
+        117
+      ],
+      "sourceText": "Make a strange noise 3 times until your next turn. If successful, take a card of your choice from an opponent or the draw pile.",
+      "text": "Make a strange noise 3 times until your next turn. If successful, take a card of your choice from an opponent or the draw pile.",
+      "notes": [],
+      "reviewStatus": "transcribed",
+      "cardImage": "cards/quiet-mimes.png",
+      "artwork": "illustrations/quiet-mimes.png",
+      "artworkSize": {
+        "width": 319,
+        "height": 185
       }
     }
   ]

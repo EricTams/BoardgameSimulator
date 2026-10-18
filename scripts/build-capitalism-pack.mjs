@@ -11,7 +11,7 @@ const pack = {
   id: "capitalism-plus",
   name: "Capitalism Plus",
   description:
-    "44 cards from your paper prototype. Draw, trade, and play your way.",
+    `${catalog.cards.length} cards from the October 18, 2026 set. Draw, trade, and play your way.`,
   backColor: "#557c69",
   cards: catalog.cards.map((card, i) => ({
     key: card.id,
