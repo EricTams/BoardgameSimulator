@@ -1854,8 +1854,26 @@ h3 {
 }
 .card-title { display:flex; align-items:flex-start; gap:5px; width:100%; }
 .card-title strong { flex:1; min-width:0; font-size:8px; line-height:1.2; text-align:left; }
-.card-title > span { flex-shrink:0; font-size:9px; line-height:1.2; font-weight:700; }
-.named-card > img { width:100%; height:100%; min-height:0; object-fit:contain; }
+.card-title > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 1.4em;
+  height: 1.4em;
+  padding: 0 .15em;
+  border: 1px solid currentColor;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+}
+.named-card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  border: 1px solid currentColor;
+}
 .card-rules { grid-row:3; margin:0; font-size:5px; line-height:1.25; text-align:left; width:100%; }
 .named-card.small { padding:3px; gap:2px; }
 .named-card.small .card-title strong { font-size:6px; }
