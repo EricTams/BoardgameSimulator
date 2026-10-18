@@ -327,11 +327,11 @@ export const catalog = {
         ],
         [
           1064,
-          1205
+          1210
         ],
         [
           1252,
-          1205
+          1210
         ],
         [
           1252,
@@ -343,11 +343,11 @@ export const catalog = {
         ],
         [
           930,
-          1205
+          1210
         ],
         [
           1035,
-          1205
+          1210
         ]
       ]
     },
@@ -690,16 +690,50 @@ export const catalog = {
       ],
       "artBounds": [
         1053,
-        1240,
+        1237,
         275,
-        160
+        163
       ],
       "sourceText": "All trades made must be approved by you.",
       "text": "All trades made must be approved by you.",
       "notes": [],
       "reviewStatus": "transcribed",
       "cardImage": "cards/people-s-choice-dictator.png",
-      "artwork": "illustrations/people-s-choice-dictator.png"
+      "artwork": "illustrations/people-s-choice-dictator.png",
+      "artPolygon": [
+        [
+          1150,
+          1237
+        ],
+        [
+          1230,
+          1237
+        ],
+        [
+          1230,
+          1257
+        ],
+        [
+          1328,
+          1257
+        ],
+        [
+          1328,
+          1400
+        ],
+        [
+          1053,
+          1400
+        ],
+        [
+          1053,
+          1260
+        ],
+        [
+          1150,
+          1260
+        ]
+      ]
     },
     {
       "id": "recycle-diver",
@@ -919,7 +953,33 @@ export const catalog = {
       "notes": [],
       "reviewStatus": "transcribed",
       "cardImage": "cards/sleep.png",
-      "artwork": "illustrations/sleep.png"
+      "artwork": "illustrations/sleep.png",
+      "artPolygon": [
+        [
+          790,
+          553
+        ],
+        [
+          891,
+          553
+        ],
+        [
+          891,
+          735
+        ],
+        [
+          738,
+          735
+        ],
+        [
+          738,
+          590
+        ],
+        [
+          790,
+          590
+        ]
+      ]
     },
     {
       "id": "pain-brain",
@@ -2047,7 +2107,33 @@ export const catalog = {
       "notes": [],
       "reviewStatus": "transcribed",
       "cardImage": "cards/ignore.png",
-      "artwork": "illustrations/ignore.png"
+      "artwork": "illustrations/ignore.png",
+      "artPolygon": [
+        [
+          752,
+          193
+        ],
+        [
+          890,
+          193
+        ],
+        [
+          890,
+          351
+        ],
+        [
+          715,
+          351
+        ],
+        [
+          715,
+          212
+        ],
+        [
+          752,
+          212
+        ]
+      ]
     },
     {
       "id": "take-them-down-with-you",
